@@ -12,13 +12,13 @@ proof sources, audit records, reproducibility material, and scope limitations.
 
 A frozen computer-assisted strict refinement of the supplied certified Gebendorfer comparator:
 
-$$
+```math
 \liminf_{T\to\infty}\frac{N_0^s(T)}{N(T)}
 \ge
 \frac{6734775921119}{10^{13}}
 =
-0.6734775921119.
-$$
+0.6734775921119
+```
 
 Here `N(T)` counts all nontrivial zeta zeros with `0 < Im(rho) <= T`, with analytic multiplicity,
 and `N_0^s(T)` counts distinct simple zeros on the critical line.
