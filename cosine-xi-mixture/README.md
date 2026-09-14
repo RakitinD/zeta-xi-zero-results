@@ -2,11 +2,7 @@
 
 For
 
-$$
-```math
-H_t(z)=(1-t)\cos z+t\Xi(z),\qquad 0<t<1
-```
-$$
+`H_t(z) = (1 - t) cos(z) + t Xi(z),  0 < t < 1`
 
 this directory contains the current theorem suite and the separate proof/audit blocks behind it.
 
