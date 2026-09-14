@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use these research artifacts, please cite this repository and the relevant theorem document."
+title: "Zeta and Xi Zero Results"
+type: software
+authors:
+  - family-names: "Rakitin"
+    given-names: "Dmitry"
+email: "phizmat17@gmail.com"
+date-released: 2026-09-14
+version: "0.1"
+repository-code: "https://github.com/RakitinD/zeta-xi-zero-results"
+url: "https://github.com/RakitinD/zeta-xi-zero-results"
+abstract: >
+  Computer-assisted results on simple zeros of the Riemann zeta function and
+  zeros of cosine-Riemann Xi mixtures, with theorem statements, proof sources,
+  audits, reproducibility evidence, and partial Lean formalization.

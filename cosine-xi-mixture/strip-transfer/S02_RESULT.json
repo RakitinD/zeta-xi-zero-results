@@ -1,0 +1,292 @@
+{
+  "campaign": "RH_COSXI_STRIP_TRANSFER_V1",
+  "researcher_id": "COSXI-S02",
+  "outcome": "UNCONDITIONAL_EXCEPTION_TRANSFER_AUTHOR_PROVED",
+  "summary": "For fixed delta and the explicit joint regime lambda>=pi T/2+O((log T)^2), an elementary uniform minimum-modulus estimate and an explicit known zero-density theorem give exact mixture/xi multiplicity transfer inside shrinking zero clusters. The original expanding-window count error is bounded by an explicit boundary charge <=Q_delta(T)=O_delta(T^(1-delta/16)log T)=o(T). Retained paths have phase-change error <=2/(3T), while holes keep exact integer charge. No positive-A moving-curve distribution or new zeta estimate is established.",
+  "claims": [
+    {
+      "id": "S02-A",
+      "title": "One-sided derivative criterion and local phase law",
+      "statement": "On the fixed zero-free collar, Re D=(1/2)log T+Re(zeta'/zeta)+O_delta(1). Condition (25) suffices for A>=kappa log T. On a connected balanced modulus graph with A>0, V'=-(A^2+B^2)/A.",
+      "status": "STANDARD_REPROVED",
+      "hypotheses": [
+        "Fixed 0<delta<1/2 and 0<kappa<1/2.",
+        "Off P zeros; a local or pathwise logarithm is specified.",
+        "For the graph law, a connected C1 balanced graph exists and A>0 on it."
+      ],
+      "domain": "The collar C of PROOF.md (1); graph law on its actual zero-free charts.",
+      "parameter_scope": "Fixed delta; T sufficiently large for (24); lambda arbitrary in the local graph identity.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Effective C_delta on the explicit non-arithmetic part. The graph derivative identity is exact.",
+      "geometric_scope": "GOOD_REGION_ONLY",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "I-CANONICAL",
+        "I-STIRLING"
+      ],
+      "claim_dependencies": [],
+      "unresolved_assumptions": [],
+      "contribution_type": "KNOWN_REPROOF",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "§6, equations (23)-(26)"
+        }
+      ]
+    },
+    {
+      "id": "S02-M",
+      "title": "Uniform minimum-modulus bound outside actual zeta zeros",
+      "statement": "Under the distance and disk hypotheses, log|zeta(w)| is bounded below by (12). In C\\E the specialized lower bound is -F(T).",
+      "status": "STANDARD_REPROVED",
+      "hypotheses": [
+        "T>=10, 1/2<=Re w<=17/8, T-1<=-Im w<=2T+1.",
+        "Distance from every zeta zero is at least d in (0,1].",
+        "For the C\\E specialization, the collar and exception conditions (3),(6) apply."
+      ],
+      "domain": "The fixed-width high strip stated in PROOF.md §3.",
+      "parameter_scope": "Every T>=10 for (12); d is explicit; the application takes d=T^(-2).",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Exact lower loss [25+log(4/d)/log(15/14)]log(200T); F(T) after d=T^(-2).",
+      "geometric_scope": "CLASSICAL_CONTROL",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "I-EULER",
+        "I-COMPLEX"
+      ],
+      "claim_dependencies": [],
+      "unresolved_assumptions": [],
+      "contribution_type": "KNOWN_REPROOF",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "§3, equations (12)-(15)"
+        }
+      ]
+    },
+    {
+      "id": "S02-E",
+      "title": "Small ordinate projection with an explicit nonzero-charge budget",
+      "statement": "The zero multiset (6) has M<=Q_delta(T). Its disk union has ordinate projection length <=4T^(-2)Q_delta(T); every relevant cluster has diameter <=4T^(-2)M_j and stays strictly in C.",
+      "status": "STANDARD_REPROVED",
+      "hypotheses": [
+        "Fixed 0<delta<1/2.",
+        "T>=2H0 and 4T^(-2)Q_delta(T)<min(delta/4,1).",
+        "Each distinct zero is assigned a general-position radius in (T^(-2),2T^(-2)); its multiplicity is retained."
+      ],
+      "domain": "Omega and its collar C as in (1); all possible zeta zeros in (6) are included.",
+      "parameter_scope": "Every T satisfying the explicit inequalities (3). No lambda assumption is needed for geometry.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "M<=Q_delta(T)=O_delta(T^(1-delta/16) log T); projected length <=4T^(-2)Q_delta(T)=O_delta(T^(-1-delta/16) log T).",
+      "geometric_scope": "EXCEPTION_GEOMETRY",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "I-ZD-SIMONIC"
+      ],
+      "claim_dependencies": [],
+      "unresolved_assumptions": [],
+      "contribution_type": "KNOWN_REPROOF",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "§2 equations (9)-(11); §1 definitions"
+        },
+        {
+          "file": "EXCEPTION_REPORT.md",
+          "locator": "Set, size and unconditional charge"
+        }
+      ]
+    },
+    {
+      "id": "S02-T",
+      "title": "Quantitative expanding-window mixture zero comparison",
+      "statement": "For lambda>=Lambda(T), each full relevant cluster contains exactly M_j actual mixture zeros and xi zeros, counted with multiplicity. All mixture zeros in the closed window lie in those clusters. N_H(Omega)<=Q_delta(T)=o(T), and |N_H(Omega)-N_xi(Omega)|<=B_Omega<=Q_delta(T), with all original boundary zeros paid for by cluster charge.",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "Fixed 0<delta<1/2 and height conditions (3).",
+        "lambda>=Lambda(T), t=exp(lambda)/(1+exp(lambda)).",
+        "Use the actual zero-based exception set (6), with multiplicities; no zero simplicity assumption."
+      ],
+      "domain": "Expanding closed window Omega: 1/2+delta<=Re w<=2, T<=-Im w<=2T. Full relevant clusters lie in C.",
+      "parameter_scope": "Every pair satisfying (3),(5); in particular lambda=Lambda(T)~pi T/2. The general lower relation only gives T=O(lambda).",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Exact cluster equality. Original-window discrepancy <=B_Omega<=Q_delta(T). Matched zero pairs within a full cluster have distance <=4T^(-2)M_j.",
+      "geometric_scope": "ZERO_COUNT_COMPARISON",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "I-CANONICAL",
+        "I-STIRLING",
+        "I-COMPLEX",
+        "I-ZD-SIMONIC"
+      ],
+      "claim_dependencies": [
+        "S02-M",
+        "S02-E"
+      ],
+      "unresolved_assumptions": [],
+      "contribution_type": "TRANSFER_LEMMA_CANDIDATE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "§1 theorem items 1-3; §4 full proof"
+        },
+        {
+          "file": "INPUT_OUTPUT_COMPARISON.md",
+          "locator": "Expanding-domain and mixture-count rows"
+        }
+      ]
+    },
+    {
+      "id": "S02-P",
+      "title": "Pathwise phase transfer and exact hole charge",
+      "statement": "On retained paths actual mixture and xi phase changes differ by at most 2/(3T); closed windings agree exactly through the single-valued correction log(1+exp(-lambda)/P). Each full cluster has D-period 2pi i M_j; deleting one circuit per relevant cluster loses exactly 2pi sum M_j, bounded by 2pi Q_delta(T).",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "The hypotheses of S02-T.",
+        "Paths lie in C\\E and phases are continuously lifted.",
+        "For the stated total deleted-charge bound use one positively oriented full boundary per relevant component; repeated paths retain their winding multiplicities."
+      ],
+      "domain": "Retained paths and full cluster boundaries in the collar C, entirely in Re w>1/2.",
+      "parameter_scope": "Every pair satisfying (3),(5), with the same explicit lambda-T relation as S02-T.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Pathwise error <=2/(3T); closed-contour error zero. Charge is exactly 2pi sum M_j<=2pi Q_delta(T), independently of radii.",
+      "geometric_scope": "PHASE_LOSS_BUDGET",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "I-CANONICAL",
+        "I-COMPLEX",
+        "I-ZD-SIMONIC"
+      ],
+      "claim_dependencies": [
+        "S02-E",
+        "S02-M",
+        "S02-T"
+      ],
+      "unresolved_assumptions": [],
+      "contribution_type": "TRANSFER_LEMMA_CANDIDATE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "§5, equations (20)-(22), residue and winding identities"
+        },
+        {
+          "file": "EXCEPTION_REPORT.md",
+          "locator": "Phase and actual transfer"
+        }
+      ]
+    },
+    {
+      "id": "S02-G",
+      "title": "Conditional lower crossing count with one-unit break penalty",
+      "statement": "If J pairwise disjoint connected balanced modulus graphs have A>=kappa log T and ordinate lengths ell_j, their interior actual odd-level intersections number at least kappa log T sum ell_j/(2pi)-J; these crossings are simple.",
+      "status": "CONDITIONAL",
+      "hypotheses": [
+        "A finite specified family of pairwise disjoint connected C1 modulus graphs exists.",
+        "P is zero-free along each graph, lambda+log|P|=0, and A>=kappa log T>0.",
+        "Continuous phase lifts are used separately; endpoint crossings are omitted."
+      ],
+      "domain": "Actual graph arcs in the fixed collar/window, not every level curve.",
+      "parameter_scope": "Conditional for each T,lambda and specified arc family; no joint asymptotic supply of graphs is asserted.",
+      "quantifier_scope": "CONDITIONAL_QUANTIFIERS",
+      "error_bound": "One crossing unit lost per arc; no unproved phase continuity through gaps is used.",
+      "geometric_scope": "CONDITIONAL_TRANSFER",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "I-CANONICAL",
+        "I-COMPLEX"
+      ],
+      "claim_dependencies": [
+        "S02-A"
+      ],
+      "unresolved_assumptions": [
+        "No quantitative existence or total-length bound for such balanced positive-A arcs is established for actual zeta.",
+        "For lambda>=Lambda(T), (19) excludes balanced arcs in C\\E; this lemma is not the unconditional application."
+      ],
+      "contribution_type": "KNOWN_REPROOF",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "§6, equation (27) and its proof"
+        }
+      ]
+    }
+  ],
+  "input_read_scope": [
+    "ROOT/FROZEN_DISPATCH_S02.md (operational dispatch)",
+    "research/S02/PROMPT.md",
+    "research/S02/TASK.md",
+    "research/S02/SOURCE_LEADS.md",
+    "common/STATE_AND_SCOPE.md",
+    "common/ALGEBRA_AND_GUARDS.md",
+    "common/SOURCE_MAP_AND_READING.md",
+    "common/OUTPUT_CONTRACT.md",
+    "source/endpoint/ENDPOINT_PROOF.md",
+    "source/endpoint_audit/AUDIT_REPORT.md",
+    "source/endpoint_audit/DEPENDENCY_CHECK.md",
+    "source/quantitative/QUANTITATIVE_PROOF.md",
+    "source/quantitative_audit/AUDIT_REPORT.md",
+    "source/completeness/COMPLETENESS_PROOF.md",
+    "schemas/RESULT.schema.json",
+    "schemas/ARITHMETIC_INPUTS.schema.json",
+    "Public primary/authoritative mathematical passages listed in SOURCE_LEDGER.json; no sibling assignment or output read."
+  ],
+  "independent_audit_performed": false,
+  "new_information_about_zeta": {
+    "classification": "KNOWN_INPUT_REUSED",
+    "claim_ids": [
+      "S02-E",
+      "S02-T",
+      "S02-P"
+    ],
+    "explanation": "All power saving in the zero charge comes from the stated known explicit Selberg-type zero-density theorem, with collar losses. The transferred count bound is for H_t. No stronger zeta count, critical-line proportion or RH claim is made.",
+    "comparison_evidence": [
+      {
+        "file": "INPUT_OUTPUT_COMPARISON.md",
+        "locator": "Full input-output table and final classification"
+      },
+      {
+        "file": "DEPENDENCY_MAP.md",
+        "locator": "Arithmetic branch and no-gain statement"
+      }
+    ]
+  },
+  "limitations": [
+    "Fixed delta only; no shrinking delta(T) theorem.",
+    "The threshold includes an O((log T)^2) analytic loss and a conservative explicit density-height cutoff.",
+    "No unconditional supply of balanced moving graphs with positive Re D is proved; E is not a cover of every derivative sign failure.",
+    "All actual mixture zeros in the window lie in the charged holes for the proved parameter regime; small projection cannot justify discarding them.",
+    "The original-window comparison pays full multiplicity for every cluster touching its boundary.",
+    "No individual root trajectory, simplicity, zero-existence, radial minimum, all-height exclusion, RH or improved zeta density statement.",
+    "Prior-art search is bounded; author contribution labels are not historical-novelty certification.",
+    "No independent audit or formal verification was performed; actual hidden model/reasoning/service tier are UNKNOWN."
+  ],
+  "actual_settings": {
+    "model": "UNKNOWN",
+    "reasoning": "UNKNOWN",
+    "service_tier": "UNKNOWN"
+  },
+  "exception_report": {
+    "exception_definition": "E is the union of one general-position disk of radius in (T^(-2),2T^(-2)) per distinct actual zeta zero with beta>=1/2+delta/2 and T-2<=-Im rho<=2T+2, with each center's analytic multiplicity retained. Relevant clusters have closures meeting Omega.",
+    "geometry_claim_ids": [
+      "S02-E"
+    ],
+    "phase_loss_claim_ids": [
+      "S02-P"
+    ],
+    "transfer_claim_ids": [
+      "S02-T",
+      "S02-P"
+    ],
+    "unconditional_application_claim_ids": [
+      "S02-T",
+      "S02-P"
+    ],
+    "zero_density_input_ids": [
+      "I-ZD-SIMONIC"
+    ],
+    "multiplicity_handling": "M and M_j sum analytic multiplicities. Each full relevant cluster transfers exactly M_j zeros. Merging disks retains all charge. Boundary clusters pay their entire M_j; original window boundary zeros are included in closed counts.",
+    "branch_handling": "Local logs of P differ by integer multiples of 2pi i. The single-valued power-series correction q_lambda yields compatible logs of P+exp(-lambda), with identical offsets. Full component loops have period 2pi i M_j; no global log P is assumed.",
+    "slicing_guard": "Uniform minimum-modulus control is proved on two-dimensional disks and then on the full retained collar. Projected-length bounds are direct union bounds. No fixed-line distribution is promoted to a moving-curve theorem; positive-A arc existence remains unestablished."
+  },
+  "stopped_for_review": true
+}

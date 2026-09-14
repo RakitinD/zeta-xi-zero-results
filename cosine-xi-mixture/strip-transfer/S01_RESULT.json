@@ -1,0 +1,426 @@
+{
+  "campaign": "RH_COSXI_STRIP_TRANSFER_V1",
+  "researcher_id": "COSXI-S01",
+  "outcome": "UNCONDITIONAL_TRANSFER_AUTHOR_PROVED",
+  "summary": "Author-proved uniform full radial minimum on 1/2-beta(6lambda)/16<=d<=1 with O(log log lambda) error, an explicit Euler-only moving range, and a genuine simple mixture root strictly below Re w=1 at the maximal stated shrinking width. Known zeta inputs are reused; no new zeta estimate or RH claim.",
+  "claims": [
+    {
+      "id": "S01-TRANSFER",
+      "title": "Connected balance-curve loss budget",
+      "statement": "If ell is an analytic logarithm on a neighborhood of a rectangle [s,s+h]xI, A=Re ell prime>=a0>0, -J<=lambda+Re ell(s,x)<=-epsilon<0, a0*h>J and a0*|I|>2pi, there is a unique smooth balance graph and a simple genuine odd-phase zero over interior I.",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "Specified zero-free logarithm rectangle; nonzero prefactor in (6); inequalities in statement."
+      ],
+      "domain": "Any such rectangle for the exact factorization (6).",
+      "parameter_scope": "Every rectangle and parameter satisfying the finite hypotheses.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Phase variation at least a0*|I|; graph thickness <h.",
+      "geometric_scope": "CONDITIONAL_TRANSFER",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "IN-EXACT"
+      ],
+      "claim_dependencies": [],
+      "unresolved_assumptions": [],
+      "contribution_type": "TRANSFER_LEMMA_CANDIDATE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "section 2, equations (8)-(9)"
+        }
+      ]
+    },
+    {
+      "id": "S01-RIGHT-EULER",
+      "title": "Moving right boundary from original Cauchy constants",
+      "statement": "If eta>0 tends to zero and eta^{-2}=o(log lambda), then R_{1/2+eta}=4lambda/pi+(8+2eta)log(lambda)/pi+O(eta^{-1}); a simple true upper root is included.",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "eta>0, eta->0, eta^{-2}=o(log lambda)."
+      ],
+      "domain": "s=1+eta>1; complete eligible root set.",
+      "parameter_scope": "Every sufficiently large lambda along any admissible eta function.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Radial O(eta^{-1}); derivative loss O(eta^{-2}); cutoff exp(O(eta^{-2})); upper height O(eta^{-1}/log lambda).",
+      "geometric_scope": "ALL_ROOTS_RADIAL_MINIMUM",
+      "domain_crosses_re_one": false,
+      "input_ids": [
+        "IN-ENDPOINT-BOUNDS",
+        "IN-EXACT"
+      ],
+      "claim_dependencies": [
+        "S01-TRANSFER"
+      ],
+      "unresolved_assumptions": [],
+      "contribution_type": "MIXTURE_CONSEQUENCE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "section 4, equations (12)-(14)"
+        }
+      ]
+    },
+    {
+      "id": "S01-LOG",
+      "title": "Interior normalized log-zeta estimates",
+      "statement": "On x>=10 and sigma>=1-beta(2x)/16, the Euler-normalized continuation g on Omega has |g|<=H(x) and |g prime|<=Z(x)=16H(x)/beta(2x), with explicit H in (17).",
+      "status": "STANDARD_REPROVED",
+      "hypotheses": [
+        "Checked Bellotti Theorems 1.1 and 1.2."
+      ],
+      "domain": "Omega={sigma-ix:x>4,sigma>1-beta(x)/2}; estimates on the stricter stated domain.",
+      "parameter_scope": "Every x>=10 and every sigma in the stated domain.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "H=O(1+log log(2x)); Z=O((log(2x))^{2/3}(log log(2x))^{4/3})=o(log x).",
+      "geometric_scope": "CLASSICAL_CONTROL",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "IN-BELLOT-VALUE",
+        "IN-BELLOT-ZF",
+        "IN-EULER",
+        "IN-SUMMATION"
+      ],
+      "claim_dependencies": [],
+      "unresolved_assumptions": [],
+      "contribution_type": "KNOWN_REPROOF",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "section 5, equations (15)-(19)"
+        }
+      ]
+    },
+    {
+      "id": "S01-CONTROL",
+      "title": "Completed derivative and boundary value control",
+      "statement": "For fixed absolute X0 and x>=X0, sigma>=1-beta(2x)/16 implies Re D>=log x/4. For 3/4<=s<=2 in the same domain, |U(s,x)+pi*x/4-(s/2+3/2)log x|<=20+H(x).",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "X0 chosen by (21)."
+      ],
+      "domain": "All eligible high-ordinate vertical rays; boundary value estimate on the specified bounded real-part band.",
+      "parameter_scope": "Every stated x,sigma,s.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Derivative loss C_E+Z(x)<=log x/4; value loss 20+H(x)=O(log log x).",
+      "geometric_scope": "CLASSICAL_CONTROL",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "IN-EXACT",
+        "IN-STIRLING"
+      ],
+      "claim_dependencies": [
+        "S01-LOG"
+      ],
+      "unresolved_assumptions": [],
+      "contribution_type": "TRANSFER_LEMMA_CANDIDATE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "section 6, equations (20)-(22)"
+        }
+      ]
+    },
+    {
+      "id": "S01-LOW",
+      "title": "Fixed low-ordinate all-height exclusion",
+      "statement": "There are fixed eps0>0 and m0 such that log|P(sigma-ix)|>=m0 for sigma>=1-eps0 and 0<=x<=X0; hence no mixture root there when lambda>-m0.",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "X0 fixed before lambda; completed xi at w=1."
+      ],
+      "domain": "sigma>=1-eps0, 0<=x<=X0, including arbitrarily large sigma.",
+      "parameter_scope": "Every lambda>-m0.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Fixed compact constants, no expanding-compact substitution.",
+      "geometric_scope": "ALL_HEIGHT_LOWER_EXCLUSION",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "IN-LINE-ONE",
+        "IN-EXACT",
+        "IN-ENDPOINT-BOUNDS"
+      ],
+      "claim_dependencies": [],
+      "unresolved_assumptions": [],
+      "contribution_type": "MIXTURE_CONSEQUENCE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "section 6, paragraph preceding equation (23) and equation (23)"
+        }
+      ]
+    },
+    {
+      "id": "S01-LOWER",
+      "title": "All-height lower radius bound",
+      "statement": "Every eligible root has |z|>=X_front(lambda,s)-O(1+log log lambda), without an upper bound on its height or an exceptional root set.",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "lambda large enough for section 8 conditions."
+      ],
+      "domain": "1-beta(6lambda)/16<=s<=3/2; d=s-1/2; all H_t zeros with |Im z|>=d; beta(v)=1/[54.004(log v)^{2/3}(log log v)^{1/3}]",
+      "parameter_scope": "Every sufficiently large real lambda, simultaneously for all s in the stated interval; absolute constants.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Radial lower loss O(1+log log lambda), absolute and uniform in s.",
+      "geometric_scope": "ALL_HEIGHT_LOWER_EXCLUSION",
+      "domain_crosses_re_one": true,
+      "input_ids": [],
+      "claim_dependencies": [
+        "S01-CONTROL",
+        "S01-LOW"
+      ],
+      "unresolved_assumptions": [],
+      "contribution_type": "MIXTURE_CONSEQUENCE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "section 7, equation (25) and all three abscissa ranges"
+        }
+      ]
+    },
+    {
+      "id": "S01-UPPER",
+      "title": "Genuine simple odd-phase upper zero",
+      "statement": "For every allowed lambda,s there is a simple first-quadrant H_t zero with x=X_front+O(log log lambda), d<y<d+O(log log lambda/log lambda); its modulus is X_front+O(log log lambda).",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "lambda large enough for section 8 conditions."
+      ],
+      "domain": "1-beta(6lambda)/16<=s<=3/2; d=s-1/2; all H_t zeros with |Im z|>=d; beta(v)=1/[54.004(log v)^{2/3}(log log v)^{1/3}]; constructed x lies in [lambda,2lambda].",
+      "parameter_scope": "Every sufficiently large real lambda, simultaneously for all s in the stated interval; absolute constants.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Connected x interval 16pi/log lambda; phase decrease >=4pi; radius O(log log lambda), height O(log log lambda/log lambda).",
+      "geometric_scope": "GENUINE_UPPER_ROOT",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "IN-EXACT"
+      ],
+      "claim_dependencies": [
+        "S01-TRANSFER",
+        "S01-CONTROL"
+      ],
+      "unresolved_assumptions": [],
+      "contribution_type": "MIXTURE_CONSEQUENCE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "section 7, equations (26)-(27) and odd-phase argument"
+        }
+      ]
+    },
+    {
+      "id": "S01-GLOBAL",
+      "title": "Uniform full moving-boundary radial minimum",
+      "statement": "The full all-root infimum is finite and attained, and R_d=4lambda/pi+(2d+7)log(lambda)/pi+O(1+log log lambda), uniformly for the stated d range. Every minimizing first-quadrant representative has y=d+O(log log lambda/log lambda).",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "lambda large enough for section 8 conditions."
+      ],
+      "domain": "1-beta(6lambda)/16<=s<=3/2; d=s-1/2; all H_t zeros with |Im z|>=d; beta(v)=1/[54.004(log v)^{2/3}(log log v)^{1/3}]",
+      "parameter_scope": "Every sufficiently large real lambda, simultaneously for all s in the stated interval; absolute constants.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Absolute O(1+log log lambda)=o(log lambda); no limiting constant claimed.",
+      "geometric_scope": "ALL_ROOTS_RADIAL_MINIMUM",
+      "domain_crosses_re_one": true,
+      "input_ids": [
+        "IN-EXACT"
+      ],
+      "claim_dependencies": [
+        "S01-LOWER",
+        "S01-UPPER"
+      ],
+      "unresolved_assumptions": [],
+      "contribution_type": "MIXTURE_CONSEQUENCE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "sections 1 and 7, equation (1), attainment and minimizer arguments"
+        }
+      ]
+    },
+    {
+      "id": "S01-ABOVE",
+      "title": "Arbitrarily fast approach from above one",
+      "statement": "For any eta_plus>0 tending to zero, d=1/2+eta_plus satisfies the full radial formula of S01-GLOBAL, once eta_plus<=1/2.",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "eta_plus>0 and tends to zero; no lower rate bound."
+      ],
+      "domain": "1<s=1+eta_plus<=3/2.",
+      "parameter_scope": "Every sufficiently large lambda along any such eta_plus function.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "O(1+log log lambda), uniform for 0<eta_plus<=1/2.",
+      "geometric_scope": "ALL_ROOTS_RADIAL_MINIMUM",
+      "domain_crosses_re_one": false,
+      "input_ids": [],
+      "claim_dependencies": [
+        "S01-GLOBAL"
+      ],
+      "unresolved_assumptions": [],
+      "contribution_type": "MIXTURE_CONSEQUENCE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "section 1, S01-ABOVE; section 7"
+        }
+      ]
+    },
+    {
+      "id": "S01-BELOW",
+      "title": "Full minimum slightly below one",
+      "statement": "For every 0<eta_minus<=beta(6lambda)/16, d=1/2-eta_minus satisfies the full radial formula of S01-GLOBAL.",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "0<eta_minus<=beta(6lambda)/16."
+      ],
+      "domain": "1-beta(6lambda)/16<=s=1-eta_minus<1.",
+      "parameter_scope": "Every sufficiently large real lambda, simultaneously for all s in the stated interval; absolute constants.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "O(1+log log lambda), uniform in eta_minus; width is a strict fraction of a known zero-free width.",
+      "geometric_scope": "ALL_ROOTS_RADIAL_MINIMUM",
+      "domain_crosses_re_one": true,
+      "input_ids": [],
+      "claim_dependencies": [
+        "S01-GLOBAL"
+      ],
+      "unresolved_assumptions": [],
+      "contribution_type": "MIXTURE_CONSEQUENCE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "section 1, S01-BELOW; section 7"
+        }
+      ]
+    },
+    {
+      "id": "S01-BELOW-ROOT",
+      "title": "Actual mixture zero strictly below one",
+      "statement": "With eta_minus=beta(6lambda)/16, the S01-UPPER zero has 1-eta_minus<Re w<1, equivalently 1/2-eta_minus<Im z<1/2.",
+      "status": "AUTHOR_PROVED",
+      "hypotheses": [
+        "eta_minus equals beta(6lambda)/16."
+      ],
+      "domain": "Strict strip between the moving boundary and Re w=1; x in [lambda,2lambda].",
+      "parameter_scope": "Every sufficiently large real lambda.",
+      "quantifier_scope": "EVERY_PARAMETER_IN_STATED_RANGE",
+      "error_bound": "Height excess O(log log lambda/log lambda)=o(eta_minus).",
+      "geometric_scope": "GENUINE_UPPER_ROOT",
+      "domain_crosses_re_one": true,
+      "input_ids": [],
+      "claim_dependencies": [
+        "S01-UPPER"
+      ],
+      "unresolved_assumptions": [],
+      "contribution_type": "MIXTURE_CONSEQUENCE",
+      "evidence_refs": [
+        {
+          "file": "PROOF.md",
+          "locator": "section 7, final width/thickness comparison"
+        }
+      ]
+    }
+  ],
+  "input_read_scope": [
+    "common/STATE_AND_SCOPE.md",
+    "common/ALGEBRA_AND_GUARDS.md",
+    "common/SOURCE_MAP_AND_READING.md",
+    "common/OUTPUT_CONTRACT.md",
+    "research/S01/TASK.md",
+    "research/S01/PROMPT.md",
+    "research/S01/SOURCE_LEADS.md",
+    "source/endpoint/ENDPOINT_PROOF.md",
+    "source/quantitative/QUANTITATIVE_PROOF.md",
+    "source/completeness/COMPLETENESS_PROOF.md",
+    "source/endpoint_audit/AUDIT_REPORT.md",
+    "source/endpoint_audit/DEPENDENCY_CHECK.md",
+    "source/quantitative_audit/AUDIT_REPORT.md",
+    "schemas/RESULT.schema.json",
+    "schemas/ARITHMETIC_INPUTS.schema.json",
+    "ROOT/FROZEN_DISPATCH_S01.md (operational dispatch)",
+    "Actually needed public sources listed in SOURCE_LEDGER.json; own output only. Quantitative full-file retrieval was partly truncated beyond the relied-on sections 2-3; no complete later-section audit is claimed."
+  ],
+  "independent_audit_performed": false,
+  "new_information_about_zeta": {
+    "classification": "KNOWN_INPUT_REUSED",
+    "claim_ids": [
+      "S01-LOG"
+    ],
+    "explanation": "No genuinely new zeta information established. The log and derivative estimates are standard consequences of the separate published value/zero-free inputs on a narrower region. New output is about the mixture.",
+    "comparison_evidence": [
+      {
+        "file": "INPUT_OUTPUT_COMPARISON.md",
+        "locator": "complete comparison table and following paragraphs"
+      }
+    ]
+  },
+  "limitations": [
+    "Unaudited first author proof; no formal or human verification claimed.",
+    "No extension to a fixed d<1/2, all Re w>1/2, RH, or a critical-line percentage.",
+    "No improvement of Bellotti zero-free or value constants; no zero-density result.",
+    "No numerical lambda0 or numerical root evidence; fixed compact constants are not numerically evaluated.",
+    "At very small eta_minus the constructed upper root may lie above Re w=1; strictly below is proved at the stated maximal width or when the displayed height condition holds.",
+    "Historical novelty not established by the bounded primary-source check."
+  ],
+  "actual_settings": {
+    "model": "UNKNOWN",
+    "reasoning": "UNKNOWN",
+    "service_tier": "UNKNOWN"
+  },
+  "moving_boundary_report": {
+    "above_one": {
+      "status": "AUTHOR_PROVED",
+      "eta_range": "Every eta_plus>0 tending to zero, eventually <=1/2. Euler-only sufficient subrange eta_plus^{-2}=o(log lambda) separately proved.",
+      "claim_ids": [
+        "S01-ABOVE",
+        "S01-RIGHT-EULER"
+      ]
+    },
+    "below_one": {
+      "status": "AUTHOR_PROVED",
+      "eta_range": "0<eta_minus<=1/[864.064*(log(6lambda))^{2/3}*(log log(6lambda))^{1/3}].",
+      "claim_ids": [
+        "S01-BELOW",
+        "S01-BELOW-ROOT"
+      ]
+    },
+    "global_minimum": {
+      "claimed": true,
+      "claim_ids": [
+        "S01-GLOBAL",
+        "S01-ABOVE",
+        "S01-BELOW",
+        "S01-RIGHT-EULER"
+      ],
+      "all_height_lower_claim_ids": [
+        "S01-LOWER",
+        "S01-LOW"
+      ],
+      "genuine_upper_root_claim_ids": [
+        "S01-UPPER"
+      ],
+      "compact_small_abscissa_evidence": [
+        {
+          "file": "PROOF.md",
+          "locator": "section 6, fixed compact rectangle and equation (23)"
+        },
+        {
+          "file": "PROOF.md",
+          "locator": "section 3, line-one proof (11)"
+        },
+        {
+          "file": "PROOF.md",
+          "locator": "section 4, explicit Euler-only bound (13)"
+        }
+      ]
+    },
+    "unconditional_application_claim_ids": [
+      "S01-RIGHT-EULER",
+      "S01-GLOBAL",
+      "S01-ABOVE",
+      "S01-BELOW",
+      "S01-BELOW-ROOT"
+    ],
+    "scope_distinctions": "Full minimum combines all-height lower exclusion over every smaller abscissa with a genuine odd-phase root. Upper construction is in [lambda,2lambda], while low ordinates and x>=3lambda are separately covered. See MOVING_BOUNDARY_REPORT.md."
+  },
+  "stopped_for_review": true
+}

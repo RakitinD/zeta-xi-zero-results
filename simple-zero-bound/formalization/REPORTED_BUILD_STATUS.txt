@@ -1,0 +1,10 @@
+Reported on local research host:
+
+STAGE6_BOOTSTRAP_BUILD = PASS
+STAGE6_AXIOM_AUDIT = PASS
+STAGE6_K1K5_BUILD = PASS
+STAGE6_K1K5_AXIOM_AUDIT = PASS
+STAGE6_K1K5_FREEZE = PASS
+
+This file is a publication status summary, not raw compiler stdout.
+See the frozen source/manifests in ../artifacts/RH_LEAN_FROZEN_SOURCES_STAGE5_STAGE6_RC1.zip.

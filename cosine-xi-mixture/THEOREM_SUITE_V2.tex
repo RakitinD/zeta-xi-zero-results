@@ -1,0 +1,165 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.92in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,hyperref}
+\usepackage[T1]{fontenc}
+\hypersetup{hidelinks}
+\setlength{\parskip}{0.42em}
+\setlength{\parindent}{0pt}
+\title{Theorem Suite for Cosine--Riemann $\Xi$ Mixtures}
+\author{Dmitry Rakitin\\Independent Researcher\\\texttt{phizmat17@gmail.com}}
+\date{14 September 2026}
+\begin{document}
+\maketitle
+
+For
+\[
+H_t(z)=(1-t)\cos z+t\Xi(z),\qquad
+\Xi(z)=\xi\!\left(\tfrac12+iz\right),\qquad0<t<1,
+\]
+this note records the current theorem-level COS--$\Xi$ results. The 11 September localization
+manuscript remains the proof document for the first theorem and qualitative background, but it
+predates the later completeness, endpoint-front, and strip-transfer results.
+
+\section*{Theorem C1: individual localization}
+\textbf{Status:} independent audit PASS.
+
+Define
+\[
+a=2\pi e^3,\quad
+c_t=\log\!\left(2e^{1/2}\sqrt{\pi}\frac{t}{1-t}\right),\quad
+D_t=3\log a+2c_t-3,
+\]
+\[
+q_n=(2n+1)\pi,\quad
+B(q)=W_0\!\left(-\frac{2iq}{a}\right),\quad
+u(q)=-\frac{2iq}{B(q)},\quad
+h_t(q)=-3-\frac{D_t}{B(q)+1},
+\]
+and
+\[
+\widehat z_n(t)=i\!\left(u(q_n)+h_t(q_n)-\tfrac12\right).
+\]
+For each fixed $t\in(0,1)$ there is $N(t)$ such that
+\[
+\left|z-\widehat z_n(t)\right|<\frac{40}{(2n+1)\pi},\qquad n\ge N(t),
+\]
+contains exactly one zero $z_n(t)$ of $H_t$, and that zero is simple. The disks are eventually
+pairwise disjoint and ordered by real part. The threshold is uniform for $t$ on compact subsets
+of $(0,1)$.
+
+Moreover
+\[
+x_n(t)=\frac{4\pi n}{\log n}
+\left(1+O_t\!\left(\frac{\log\log n}{\log n}\right)\right),
+\]
+\[
+y_n(t)=\frac{2\pi^2n}{(\log n)^2}
+\left(1+O_t\!\left(\frac{\log\log n}{\log n}\right)\right),
+\]
+and
+\[
+y_n(t)=\frac{\pi x_n(t)}{2\log x_n(t)}
++O_t\!\left(\frac{x_n(t)}{(\log x_n(t))^2}\right).
+\]
+
+\section*{Theorem C2: completeness and total nonreal count}
+\textbf{Status:} independent audit PASS.
+
+For fixed $t$, the nonreal zero set is a finite exceptional multiset together with the fourfold
+symmetry orbits of the localized sequence:
+\[
+\{\text{nonreal zeros of }H_t\}
+=
+E_t\uplus
+\biguplus_{n\ge N_C(t)}
+\{z_n,\overline z_n,-z_n,-\overline z_n\}.
+\]
+Hence, with analytic multiplicity,
+\[
+\boxed{N_t^{\rm nr}(R)\sim\frac{R\log R}{\pi}}.
+\]
+
+\section*{Theorem C3: fixed-height endpoint front}
+\textbf{Status:} independent audit PASS.
+
+For fixed $d>1/2$ put
+\[
+\lambda=\log\frac{t}{1-t},\qquad
+R_d(t)=\inf\{|z|:H_t(z)=0,\ |\operatorname{Im}z|\ge d\}.
+\]
+Then
+\[
+\boxed{
+R_d(t)=\frac4\pi\lambda+\frac{2d+7}{\pi}\log\lambda+O_d(1)
+}
+\]
+as $\lambda\to+\infty$. The upper bound is realized by a simple first-quadrant root of height
+$d+O_d(1/\log\lambda)$.
+
+\section*{Theorem C4: moving-boundary endpoint front}
+\textbf{Status:} S01 PASS\_AS\_WRITTEN.
+
+Let
+\[
+\beta(v)=\{54.004(\log v)^{2/3}(\log\log v)^{1/3}\}^{-1}.
+\]
+There are absolute constants $C,\lambda_0$ such that for every $\lambda\ge\lambda_0$ and
+\[
+1-\frac{\beta(6\lambda)}{16}\le s\le\frac32,\qquad d=s-\frac12,
+\]
+one has
+\[
+\boxed{
+\left|
+R_d(t)-
+\left\{\frac4\pi\lambda+\frac{2d+7}{\pi}\log\lambda\right\}
+\right|
+\le C(1+\log\log(6\lambda)).
+}
+\]
+The same constants work across the whole moving interval. For the maximal allowed downward
+movement, the constructed mixture zero eventually satisfies
+$0<\operatorname{Im}z<1/2$.
+
+\section*{Theorem C5: fixed-strip cluster/count/phase transfer}
+\textbf{Status:} main theorem S02-T PASS\_AS\_WRITTEN.
+
+Fix $0<\delta<1/2$, define
+\[
+a=\tfrac12+\delta,\quad h=\delta/4,\quad q=1-\delta/16,\quad r=T^{-2},
+\]
+and the window
+\[
+\Omega=\{\sigma-ix:a\le\sigma\le2,\ T\le x\le2T\}.
+\]
+Let
+\[
+J_q(Y)=10395.2Y^q\log Y+
+1.104(\log Y)^2+0.173\log Y\log\log Y+0.51\log Y,
+\]
+\[
+Q_\delta(T)=J_q(T/2)+J_q(T)+J_q(2T).
+\]
+Under the explicit large-height hypotheses of the frozen proof and $\lambda\ge\Lambda(T)$:
+\begin{enumerate}
+\item total relevant zeta-zero multiplicity is at most $Q_\delta(T)$;
+\item each full relevant component contains equal total mixture and $\xi$ multiplicity $M_j$;
+\item
+\[
+|N_H(\Omega)-N_\xi(\Omega)|\le B_\Omega\le Q_\delta(T),
+\qquad
+N_H(\Omega)\le Q_\delta(T)=o(T);
+\]
+\item on zero-free paths, lifted phase changes differ by at most $2/(3T)$; on closed contours
+their windings agree exactly.
+\end{enumerate}
+
+\paragraph{Audit exclusion.}
+One redundant component-hole sentence in the original S02 proof was judged false as a general
+geometric statement. It is excluded here. The audit accepted the main S02-T transfer theorem
+without that inference.
+
+\section*{Status and scope}
+C1, C2 and C3 are independently audited theorem blocks. C4 is S01 PASS\_AS\_WRITTEN.
+C5 is the accepted S02-T theorem. No theorem here is a proof of RH.
+\end{document}

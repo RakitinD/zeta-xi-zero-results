@@ -1,0 +1,68 @@
+{
+  "schema": "RH_FINAL_PUBLICATION_REFEREE_RC2_RESULT_V1",
+  "verdict": "PUBLICATION_PASS_WITH_EDITORIAL_DEFECTS_ONLY",
+  "frozen_utc": "2026-09-14T03:09:30.908289+00:00",
+  "input_bundle_sha256": "25bd34fb3a8157dc709a16864462c51355eb3078d11c4c4d4b4310ba0710c825",
+  "substantive_blocker": null,
+  "headline": "6734775921119/10000000000000",
+  "exact_gain": "34271814394247548721/491155304728390000000000000",
+  "editorial_or_reproducibility_findings": [
+    {
+      "id": "E1",
+      "summary": "Make original positive-height counting convention explicit.",
+      "file": "publication/preprint/PREPRINT_V0_1.tex",
+      "locator": "section 1, line 31"
+    },
+    {
+      "id": "E2",
+      "summary": "Link the complete frozen mathematical proof and exact data; add primary-source bibliography. RC2 contains these proofs; the three-page overview is not a standalone full proof.",
+      "file": "publication/preprint/PREPRINT_V0_1.tex",
+      "locator": "sections 3 and 6; RELEASE_CHECKLIST.md lines 10–15"
+    },
+    {
+      "id": "E3",
+      "summary": "Partial Lean scope is accurate; raw build/axiom stdout is absent from RC2. Reported build PASS is not independently rerun here.",
+      "file": "publication/LEAN_STATUS.md",
+      "locator": "lines 12–21; lean stage6_bootstrap/RHDirectStage6/PublicationTheorem.lean lines 21–43"
+    },
+    {
+      "id": "E4",
+      "summary": "Document existing PGF-A path relocation and the separate Windows continuation; official full runner returned 1, all computation obligations completed through continuation.",
+      "file": "cross_host/evidence/GEBENDORFER_CROSS_HOST_REPLAY_RECEIPT_V2.json",
+      "locator": "official_single_process_byte_identical_full_replay and official_replay_detail; hostile INDEPENDENT_REDERIVATION.md K16"
+    },
+    {
+      "id": "E5",
+      "summary": "Author-name placeholder remains.",
+      "file": "publication/preprint/PREPRINT_V0_1.tex",
+      "locator": "line 6"
+    }
+  ],
+  "checks": {
+    "artifact_pins": 6,
+    "inner_manifests": 9,
+    "lean_files": 66,
+    "cross_host_nodes_in_bound_logs": 58577037,
+    "lf_crlf_hash_derivation_matches": true,
+    "independent_exact_replay_matches": true,
+    "pdf_pages_visually_reviewed": 3,
+    "source_files_unchanged": true
+  },
+  "source_scope_checks": [
+    {
+      "url": "https://arxiv.org/html/2609.02882v1#S3",
+      "locator": "Lemma 3.1; two fixed test functions in section 3"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2306.04799v1",
+      "locator": "Lemma 5, equation (3.4), PDF page 6"
+    }
+  ],
+  "new_research_agents": 0,
+  "parameter_changes": false,
+  "mathematical_repairs": false,
+  "exhaustive_replay_run_here": false,
+  "lean_build_run_here": false,
+  "publication_or_outreach_performed": false,
+  "scope_note": "Final claim/evidence correspondence audit of the full supplied RC2, not a fresh complete formal or exhaustive computational proof."
+}

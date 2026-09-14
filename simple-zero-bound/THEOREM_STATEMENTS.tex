@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.92in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,hyperref}
+\usepackage[T1]{fontenc}
+\hypersetup{hidelinks}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\title{Frozen Theorem Statements:\\Simple Critical-Line Zeros}
+\author{Dmitry Rakitin\\Independent Researcher\\\texttt{phizmat17@gmail.com}}
+\date{14 September 2026}
+\begin{document}
+\maketitle
+\section*{Status}
+This note extracts theorem-level statements from the frozen post-Gebendorfer fusion proof.
+The frozen exact author verifier returns \texttt{PASS\_EXACT}; the hostile audit passed K1--K15;
+the final publication referee returned
+\texttt{PUBLICATION\_PASS\_WITH\_EDITORIAL\_DEFECTS\_ONLY}.
+The Gebendorfer finite layer was independently cross-host replayed for 58,577,037 nodes.
+Lean formalization is partial.
+
+\section*{Notation}
+Let $N(T)$ count all nontrivial zeta zeros $\rho$ with
+$0<\operatorname{Im}\rho\le T$, with analytic multiplicity. Let $N_0^s(T)$ count distinct
+zeros $\rho=\frac12+i\gamma$ with $0<\gamma\le T$ and multiplicity one. Put
+\[
+\kappa_0^s=\liminf_{T\to\infty}\frac{N_0^s(T)}{N(T)}.
+\]
+
+\section*{Theorem S1: simple critical-line zero proportion}
+\[
+\boxed{\kappa_0^s\ge\frac{6734775921119}{10^{13}}=0.6734775921119}.
+\]
+For the supplied certified Gebendorfer comparator
+\[
+r_G=\frac{8269551442741204889710953}{12278882618209750000000000},
+\]
+the exact gain is
+\[
+\frac{6734775921119}{10^{13}}-r_G
+=\frac{34271814394247548721}{491155304728390000000000000}>0.
+\]
+
+\section*{Theorem S2: one common residual state}
+On the frozen normalized state,
+\[
+x=s/N,\quad u=k/N,\quad v=\ell/N,\quad w=\beta/N,\quad
+c=q_0/N=1-x-2w,
+\]
+with $d=D/N$ and $y=Y/N$, one has
+\[
+S_2-2N+s=D+Y,\qquad hN+D+Y\le s+o(N),
+\]
+and the feasible region contains
+\[
+h\le x\le1,\qquad 2u+v\le x,\qquad d+y\le x-h,
+\]
+\[
+d\ge u+2v+\frac{(u+v)^2}{x-u}.
+\]
+All later gains are restrictions or decompositions of this same residual budget.
+
+\section*{Theorem S3: global residual payment}
+\[
+y-\rho v\ge-p_h(x;\rho),
+\]
+where
+\[
+p_h(x;\rho)=\frac{\sqrt{A_x^2+\rho^2N_x}-A_x}{2},\quad
+A_x=(2x-h)+\rho x,\quad
+N_x=\frac{(2-h)x-h}{2}.
+\]
+
+\section*{Theorem S4: universal local supporting plane}
+For
+\[
+m=492,\qquad \rho=\frac{19569717577}{10^{14}},\qquad
+R=\frac{38219880252651}{10^{13}},
+\]
+the frozen tail-aware band profile satisfies
+\[
+\boxed{
+G_{m,\rho}(ne)+n\sum_{k=0}^5t_k u_k^{\rm loc}\ge R
+}
+\]
+throughout the complete 69-row reflected-trim polyhedron, with $n=486$.
+The certificate uses 464 exact rational chord/ray pieces with nonnegative Farkas weights;
+floating vertex completeness is not a premise.
+
+\section*{Theorem S5: all-offset transport}
+\[
+\boxed{
+d+\rho v\ge\frac{Rx-P_{\rm price}}{m}
+},
+\qquad
+P_{\rm price}=
+\frac{47854801908769656526884823}{25000000000000000000000000}.
+\]
+
+\section*{Theorem S6: exact fusion separator}
+Let
+\[
+s_0=\frac{6734775921119}{10^{13}}.
+\]
+The exact replay verifies the strictly positive rational margin
+\[
+M_{\rm end}:=mh-P_{\rm price}-m\bar p-(m-R)s_0>0.
+\]
+Its exact numerator and denominator are recorded in the frozen verifier and in the accompanying
+Markdown theorem sheet. Together with
+\[
+d+y=(d+\rho v)+(y-\rho v),
+\]
+this excludes $h\le x\le s_0$; the imported basic inequality excludes $x<h$.
+
+\section*{Dependency map}
+\[
+\text{certified local base}
+\to
+\text{common residual state}
+\to
+\text{69-row plane}
+\to
+\text{transport + one global payment}
+\to
+\text{exact separator}.
+\]
+
+\section*{Scope}
+This is not RH, not full Lean formalization, not completed human peer review, and not a
+literature-wide priority claim.
+\end{document}

@@ -1,0 +1,491 @@
+{
+  "audit_id": "COSXI-EHC01",
+  "source_proof_sha256": "3de5141d1ed01051416e214cbd76e1eb0b5414a935b3d788aa3f2a56e315a949",
+  "overall_increment_verdict": "PASS_AS_WRITTEN",
+  "leading_front_verdict": "PASS_AS_WRITTEN",
+  "two_term_front_verdict": "PASS_AS_WRITTEN",
+  "claims": [
+    {
+      "claim_id": "E0_COMPACT_SCOPE",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Section 1, including (1.1)",
+      "reason": "Exact compact difference, strict contour comparison, multiplicity and conjugation prove the stated local assertions and standard all-d scope equivalence.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "2. E0 — compact scope"
+        }
+      ],
+      "depends_on": [
+        "I3"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "No simplicity of multiple Xi zeros; no RH proof."
+      ]
+    },
+    {
+      "claim_id": "E1_EXTERIOR_MOTION",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Section 2, (2.1)–(2.6) and maximal-interval proof",
+      "reason": "Canonical factorization, whole-half-plane derivative control, segment injectivity and bounded-speed inverse continuation prove both motion and the finite exterior exit.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "3. E1 — canonical levels, motion and maximal exit"
+        }
+      ],
+      "depends_on": [
+        "I1",
+        "I2",
+        "I3"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "Actual connected branch only in Re w>a; no continuation through its boundary or collision on the real axis."
+      ]
+    },
+    {
+      "claim_id": "E2_LEADING_OUTER_FRONT",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Sections 3–5; (4.2), (5.4)",
+      "reason": "A lower bound covers every eligible root at every height, and a strictly traversed odd phase supplies a true simple exterior upper root; radial conversion gives the leading law.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "6. E2/E3 upper half — genuine phase and radial minimum"
+        }
+      ],
+      "depends_on": [
+        "I1",
+        "I3",
+        "new_estimates_every_fixed_r",
+        "all_height_lower_bound",
+        "genuine_phase_upper_root"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "Each d>1/2 fixed before lambda grows; entire eligible root set."
+      ]
+    },
+    {
+      "claim_id": "E3_LOG_CORRECTION",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Sections 4–6; theorem (T)",
+      "reason": "The same all-height lower and genuine-root upper estimates are T(lambda)+O_d(1), with b/kappa=(2d+7)/pi; the bounded-remainder two-term law follows for the all-root infimum.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "6. E2/E3 upper half — genuine phase and radial minimum"
+        }
+      ],
+      "depends_on": [
+        "I1",
+        "I3",
+        "new_estimates_every_fixed_r",
+        "all_height_lower_bound",
+        "genuine_phase_upper_root"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "No limit of the bounded remainder; no uniformity as d decreases to 1/2."
+      ]
+    },
+    {
+      "claim_id": "E4_MOVING_PHASE",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Section 6, (6.1)–(6.3)",
+      "reason": "Nonempty finite disk subsets give attainment. Upward integration bounds every minimizing representative height, and the direct canonical imaginary expansion gives the original phase index.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "7. E4 — attainment, every minimizer and canonical phase"
+        }
+      ],
+      "depends_on": [
+        "E2_LEADING_OUTER_FRONT",
+        "E3_LOG_CORRECTION",
+        "I1",
+        "I3"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "Signed x and negative phase refer to first-quadrant representatives; selection may switch; phase index is not radial rank."
+      ]
+    },
+    {
+      "claim_id": "E5_LOCAL_PROFILE",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Section 7, (7.1)–(7.2)",
+      "reason": "The scalar basepoint has nonzero derivative of logarithmic size; Taylor control in a smaller fixed complex Euler exterior proves the uniform error and phase-retaining subsequence; Rouche gives local simple zeros.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "8. E5 — scalar basepoint and complex profile"
+        }
+      ],
+      "depends_on": [
+        "I1",
+        "I3",
+        "new_estimates_every_fixed_r",
+        "genuine_phase_upper_root"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "Basepoint is not required to be a zero; no universal phase limit or rate to fixed eta; local zeros need not all have height at least d."
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "dependency_id": "I1",
+      "status": "CHECKED_REQUIRED_SCOPE",
+      "checked_scope": "Canonical analytic quotient, branches, exact lambda, all odd levels and multiplicity on Re w>1.",
+      "source_locators": [
+        "QUANTITATIVE_PROOF.md section 2, (11)–(18)",
+        "ENDPOINT_PROOF.md section 2, (2.1)–(2.3)"
+      ],
+      "issues": [],
+      "evidence_refs": [
+        {
+          "file": "DEPENDENCY_CHECK.md",
+          "locator": "2. I1 — exact reduction and multiplicity"
+        }
+      ]
+    },
+    {
+      "dependency_id": "I2",
+      "status": "CHECKED_REQUIRED_SCOPE",
+      "checked_scope": "Remainder derivative uniformly on closed Re w>=2, then positive real derivative on Re w>=a, global univalence and vertical phase sign on open Re w>a.",
+      "source_locators": [
+        "QUANTITATIVE_PROOF.md section 3, (19)–(20)",
+        "COMPLETENESS_PROOF.md sections 2–4, U1–U3"
+      ],
+      "issues": [],
+      "evidence_refs": [
+        {
+          "file": "DEPENDENCY_CHECK.md",
+          "locator": "3. I2 — whole-half-plane derivative and U1–U3"
+        }
+      ]
+    },
+    {
+      "dependency_id": "I3",
+      "status": "CHECKED_REQUIRED_SCOPE",
+      "checked_scope": "Xi normalization/reflection and exterior zero-free Euler logarithm, log-Gamma sector remainder, Cauchy estimates, real/complex local inverse or implicit theorem, compact persistence and local simple zero count.",
+      "source_locators": [
+        "DLMF 25.4.3–4; 25.2.11; 5.11.1 and 5.11(ii)",
+        "DLMF 1.9.30–31; 1.10(iv),(vii)",
+        "MIT 18.022 implicit-function handout, page 1",
+        "Hotta–Wang section 1.2, Theorem 1.A"
+      ],
+      "issues": [],
+      "evidence_refs": [
+        {
+          "file": "DEPENDENCY_CHECK.md",
+          "locator": "4. I3 — classical analytic inputs and their mappings"
+        }
+      ]
+    }
+  ],
+  "motion_logic": {
+    "ode_and_speed": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "On the actual inverse branch, differentiation gives -1/ell'; positive real derivative proves decreasing height, speed <16/5 and simplicity.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "3. E1 — canonical levels, motion and maximal exit"
+        }
+      ],
+      "scope_limits": [
+        "Exterior component only."
+      ]
+    },
+    "maximal_interval_and_exit": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Fixed phase bounds the imaginary part; forward real monotonicity bounds a rectangle, excluding infinite forward lambda. Speed gives endpoint convergence, interior continuation excludes finite backward endpoints and forces forward exit at Re w=a.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "3. E1 — canonical levels, motion and maximal exit"
+        }
+      ],
+      "scope_limits": [
+        "J=(-infinity,beta) for the connected branch, beta finite; no extension across the boundary asserted."
+      ]
+    }
+  },
+  "outer_front_logic": {
+    "new_estimates_every_fixed_r": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Each r>1 has a direct Euler/log-Gamma value bound and fixed Cauchy disks above r_->1, giving derivative control uniform in every height, including 1<r<2.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "4. New estimates for every fixed r>1"
+        }
+      ],
+      "scope_limits": [
+        "Constants depend on r; no boundary-uniform claim."
+      ]
+    },
+    "all_height_lower_bound": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Large height at bounded x is handled by a monotone tail and compact rectangle; for large x all-height monotonicity reduces every root to a boundary inequality, then a bootstrap gives |z|>=T-C_L.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "5. E2/E3 lower half — all-height exclusion"
+        }
+      ],
+      "scope_limits": [
+        "All |Im z|>=d, with equality included; symmetry representatives used."
+      ]
+    },
+    "genuine_phase_upper_root": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The scalar modulus curve lies strictly above d over a length-one x interval. Its canonical phase drops by more than 2*pi, so an interior odd level is attained; positive derivative gives a simple actual root and the height bound controls radius.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "6. E2/E3 upper half — genuine phase and radial minimum"
+        }
+      ],
+      "scope_limits": [
+        "Every sufficiently large real lambda; not just a subsequence."
+      ]
+    },
+    "leading_radial_minimum": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Both independently checked lower exclusion and true-root upper existence give the full infimum at 4lambda/pi+O_d(log lambda).",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "6. E2/E3 upper half — genuine phase and radial minimum"
+        }
+      ],
+      "scope_limits": [
+        "Entire eligible root set."
+      ]
+    },
+    "two_term_radial_minimum": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The same two inequalities sandwich the full infimum between T-C_L and T+C+2, with the claimed logarithmic coefficient and bounded remainder.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "6. E2/E3 upper half — genuine phase and radial minimum"
+        }
+      ],
+      "scope_limits": [
+        "No convergence of the bounded remainder; d fixed."
+      ]
+    }
+  },
+  "minimizer_logic": {
+    "attainment": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "An actual exterior root supplies a finite radius; the nonzero entire function has a nonempty finite eligible set within that disk, attaining its minimum.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "7. E4 — attainment, every minimizer and canonical phase"
+        }
+      ],
+      "scope_limits": [
+        "Large lambda; closed height condition."
+      ]
+    },
+    "every_minimizer_height": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Every first-quadrant root in the stated radius window has bounded boundary modulus error; integrating a uniform positive height derivative gives y-d=O_d(1/log lambda) without assuming its height bounded.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "7. E4 — attainment, every minimizer and canonical phase"
+        }
+      ],
+      "scope_limits": [
+        "All minimizing representatives and all first-quadrant roots in the stated fixed-radius window."
+      ]
+    },
+    "original_phase_index": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The direct bounded-height imaginary expansion gives eventually negative phase, q=(2n+1)pi, m=-n-1, q~2lambda log lambda/pi and n~lambda log lambda/pi^2.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "7. E4 — attainment, every minimizer and canonical phase"
+        }
+      ],
+      "scope_limits": [
+        "First-quadrant canonical representative; no radial-rank or continuous-selection claim."
+      ]
+    }
+  },
+  "profile_logic": {
+    "non_root_scalar_basepoint": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The prescribed x=T+C has a unique modulus-balance height from strict monotonicity; no complex zero condition is imposed.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "8. E5 — scalar basepoint and complex profile"
+        }
+      ],
+      "scope_limits": [
+        "Accidental basepoint zeros are allowed, not presumed."
+      ]
+    },
+    "uniform_complex_error": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "On every fixed compact v-set the full segments stay above a fixed r>1; bounded ell double prime and |p| comparable to log lambda give the inverse-log-squared Taylor and exponential error.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "8. E5 — scalar basepoint and complex profile"
+        }
+      ],
+      "scope_limits": [
+        "Nonzero denominator suffices; no uniform denominator lower bound is claimed."
+      ]
+    },
+    "phase_retaining_subsequence": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Exact modulus balance gives unit eta_lambda; compactness yields convergent phase subsequences and locally uniform limits 1+eta exp(v).",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "8. E5 — scalar basepoint and complex profile"
+        }
+      ],
+      "scope_limits": [
+        "No universal phase or rate to a fixed limiting eta."
+      ]
+    },
+    "local_simple_zero_persistence": {
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Rouche on finitely many disjoint circles around simple limiting lattice zeros gives exactly one zero counted with multiplicity in each, hence simple normalized original zeros.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "8. E5 — scalar basepoint and complex profile"
+        }
+      ],
+      "scope_limits": [
+        "Local Euler domain only; not all these zeros are asserted exterior to height d."
+      ]
+    }
+  },
+  "prior_art": {
+    "exact_family_status": "NO_MATCH_IN_BOUNDED_SEARCH",
+    "two_term_coverage": "NO_COVERING_THEOREM_FOUND_IN_BOUNDED_SEARCH",
+    "motion_coverage": "PARTIAL_COVERAGE",
+    "profile_coverage": "KNOWN_METHOD_ONLY",
+    "method_status": "Classical canonical logarithms, Euler/Stirling control, univalence, implicit phase crossing, Taylor linearization and Rouche; no new general method claimed.",
+    "world_novelty_established": false,
+    "comparisons": [
+      {
+        "source": "Hotta–Wang, Quasiconformal extendibility of integral transforms of Noshiro-Warschawski functions",
+        "exact_locator": "https://arxiv.org/html/1401.5647 ; section 1.2, Theorem 1.A",
+        "access_status": "Primary HTML inspected before author ledger; name already disclosed by proof",
+        "classification": "PARTIAL_COVERAGE",
+        "hypothesis_mapping": "f=ell, D={Re w>a}, rotation c=0; I1 gives analyticity, I2 gives nonconstancy and Re ell'>0; D is convex.",
+        "coverage_scope": "Univalence substep of E1 only.",
+        "limits": "Does not supply finite branch exit, moving endpoint, exterior attainment, radial minimum, second term or profile."
+      },
+      {
+        "source": "Lagarias–Montague, The Integral of the Riemann xi-Function",
+        "exact_locator": "https://arxiv.org/html/1106.4348 ; section 2.2, Theorem 2.2",
+        "access_status": "Primary HTML statement inspected in phase 3",
+        "classification": "RELATED_ONLY",
+        "hypothesis_mapping": "The theorem uses a primitive J at a fixed constant level. Target uses xi itself at -exp(-lambda)cosh(w-1/2); neither function nor right side maps.",
+        "coverage_scope": "Related value-distribution geometry, not this small-parameter first-root theorem.",
+        "limits": "No complete-paper or citation-network exclusion; no direct height/radius/phase/two-term coverage at this locator."
+      },
+      {
+        "source": "Hryniv–Mykytyuk, Asymptotics of zeros for some entire functions",
+        "exact_locator": "https://arxiv.org/pdf/math/0410420 ; printed pages 1–2, (1.1), (A1)–(A3), Theorem 1.1",
+        "access_status": "Initial search lead; primary PDF text and relevant pages visually inspected in phase 3",
+        "classification": "RELATED_ONLY",
+        "hypothesis_mapping": "Finite-interval Fourier-integral/sine-type class has a finite exponential-type bound. Target H_t has positive-imaginary-ray Gamma growth with log modulus of order y log y; this fails the class map.",
+        "coverage_scope": "Related large-index lattice perturbations, no endpoint radial minimum identification.",
+        "limits": "No assertion about uninspected results elsewhere; no uniform small-parameter all-height/first-root/two-term conclusion mapped."
+      },
+      {
+        "source": "Sjöstrand, Counting zeros of holomorphic functions of exponential growth",
+        "exact_locator": "https://arxiv.org/pdf/0910.0346 ; printed pages 3–4, Theorem 1.1 and (1.1)–(1.3), (1.6)–(1.8)",
+        "access_status": "HTML failed; primary PDF text and relevant pages visually inspected in phase 3",
+        "classification": "KNOWN_METHOD",
+        "hypothesis_mapping": "Parameter-dependent bounded Lipschitz domains are allowed. A rescaled target is analytic, but boundary scale, subharmonic majorant, sampled lower bounds and decisive count error have not been verified for the endpoint problem.",
+        "coverage_scope": "Relevant general zero-counting method; complete endpoint coverage not established.",
+        "limits": "Not categorically inapplicable. A new mapped application is not supplied. All-height exclusion, admissible upper root, exact phase, radial minimum and bounded second-term error remain unmapped."
+      },
+      {
+        "source": "DLMF local analysis and MIT real implicit-function theorem",
+        "exact_locator": "DLMF 1.9.31; 1.10(iv),(vii); MIT 18.022 implicit.pdf page 1",
+        "access_status": "Official HTML and primary teaching PDF inspected; PDF page visually checked",
+        "classification": "KNOWN_METHOD",
+        "hypothesis_mapping": "Analytic circles strictly inside the Euler domain and nonzero derivatives meet the local hypotheses; compact uniform errors meet strict contour comparison.",
+        "coverage_scope": "Standard compact persistence, local inverse/curve tools, Taylor and local exponential-profile mechanism.",
+        "limits": "Family-specific scalar basepoint, uniform remainder and full all-root radial bounds are not a quoted general endpoint theorem."
+      }
+    ],
+    "search_scope": "Four actual initial short queries before author ledger, two later exact-family/topic queries and two standard-input locator queries; selected primary statements only.",
+    "access_limitations": [
+      "Not exhaustive across databases, languages, history or citations; no specialist consultation.",
+      "Some initial broad perturbation leads remain at metadata or snippet level and are not theorem-coverage evidence.",
+      "Sjöstrand and Hryniv–Mykytyuk HTML/screenshot failures were resolved by primary PDFs and local relevant-page inspection.",
+      "A full endpoint application of Sjöstrand has not been established; neither direct coverage nor categorical inapplicability is asserted."
+    ],
+    "evidence_refs": [
+      {
+        "file": "PRIOR_ART_AUDIT.md",
+        "locator": "1. Separate historical conclusion"
+      },
+      {
+        "file": "SOURCE_LEDGER.json",
+        "locator": "query_batches and public_sources"
+      }
+    ]
+  },
+  "early_snapshots": [
+    {
+      "file": "INDEPENDENT_OUTLINE.md",
+      "sha256": "6834c283a7e4fd44c81033072e31eea7cd8a14c02d7c7c8846dd1bb5a49fe3d0"
+    },
+    {
+      "file": "INDEPENDENT_SEARCH_START.json",
+      "sha256": "8e09b385ab9d5e6f68a31868bbbfd0a3a0d0dfa58281c5d1bfce9a17e3b79da3"
+    }
+  ],
+  "scope": {
+    "full_endpoint_proof_read": true,
+    "fresh_context": true,
+    "outline_first": true,
+    "initial_search_before_author_ledger": true,
+    "source_names_visible_before_initial_search": "DLMF/NIST, Rouche, Euler, Stirling/log-Gamma, Cauchy, Hotta–Wang/Noshiro–Warschawski and internal COSXI author/audit labels were visible in phase-2 mathematical text; not blind discoveries.",
+    "inherited_audits_read_after_initial_checks": true,
+    "model": "UNKNOWN",
+    "reasoning": "UNKNOWN",
+    "service_tier": "UNKNOWN",
+    "numerics": "No numerical root computations, scans, threshold optimization or numerical mathematical certification.",
+    "source_preservation": "Read only exact released paths. Source bytes copied unchanged as used evidence; early three records preserved. No supplied script or validator executed.",
+    "limitations": [
+      "One language-agent audit, not formal proof verification, human review, OS isolation or certified statistical independence.",
+      "Each d>1/2 fixed; no d<=1/2 project, uniform boundary limit, all-trajectory theorem, second remainder limit, manuscript rewrite or RH proof.",
+      "The signed x/negative phase in section 6 uses the already established first-quadrant representative convention.",
+      "No private uploads, publication, deposit, external contact, children, replacement or settings override.",
+      "System UTC and hashes give observable local chronology only, not trusted priority notarization or private cognitive order."
+    ]
+  },
+  "frozen_source_edited": false,
+  "rh_implication_claimed": false
+}

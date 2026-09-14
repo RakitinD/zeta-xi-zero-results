@@ -1,0 +1,217 @@
+{
+  "campaign": "RH_COS_XI_TAIL_COMPLETENESS_V1",
+  "worker_id": "COSXI-C01",
+  "outcome": "COMPLETENESS_AND_LEADING_COUNT_AUTHOR_PROVED",
+  "summary": "For each fixed 0<t<1, global univalence of the canonical L_t on a common far-right half-plane, phase-sign matching and inherited strip finiteness prove completeness modulo a finite multiset for the unchanged localized sequence. A radial epsilon sandwich then proves the total nonreal leading count R log R/pi, with multiplicity.",
+  "claims": [
+    {
+      "claim_id": "U1",
+      "status": "AUTHOR_PROVED",
+      "statement": "With Sigma=a=2*pi*e^3, Re L_t'(w)>5/16 on Re w>=Sigma. This is an analytic assertion, not a zero count.",
+      "hypotheses": [
+        "H_t and the canonical L_t are as defined in the frozen task and proof Section 1.",
+        "No RH assumption or Xi-zero simplicity assumption.",
+        "Inherited exact decomposition I1 and full-half-plane E' bound I2 on Re w>=2."
+      ],
+      "parameter_scope": "All real 0<t<1 with the same Sigma and lower bound.",
+      "dependencies": [
+        "I1: Q01 (18)",
+        "I2: Q01 Q3 (20)"
+      ],
+      "evidence_refs": [
+        {
+          "file": "COMPLETENESS_PROOF.md",
+          "locator": "Section 2, Lemma U1, equations (2.1)–(2.2)"
+        }
+      ],
+      "limitations": [
+        "The constant is not optimized; no localization threshold uniformity is inferred."
+      ]
+    },
+    {
+      "claim_id": "U2",
+      "status": "AUTHOR_PROVED",
+      "statement": "L_t is globally injective on Re w>Sigma. Every H_t-zero represented there is simple, with multiplicity preserved by the canonical factorization and affine coordinate map.",
+      "hypotheses": [
+        "H_t and the canonical L_t are as defined in the frozen task and proof Section 1.",
+        "No RH assumption or Xi-zero simplicity assumption.",
+        "The half-plane is convex and U1 holds."
+      ],
+      "parameter_scope": "Each fixed real 0<t<1; the half-plane itself is common to all t.",
+      "dependencies": [
+        "U1",
+        "I1: Q01 (14)–(15)"
+      ],
+      "evidence_refs": [
+        {
+          "file": "COMPLETENESS_PROOF.md",
+          "locator": "Section 3, Lemma U2, equation (3.1) and multiplicity consequence"
+        }
+      ],
+      "limitations": [
+        "No surjectivity onto arbitrary phase values is asserted."
+      ]
+    },
+    {
+      "claim_id": "U3",
+      "status": "AUTHOR_PROVED",
+      "statement": "Im L_t(sigma+iv) has exactly the sign of v for sigma>Sigma. Upper-right H_t-zeros have level -iq_n with n>=0 and m=-n-1; upper-left partners have +iq_n and m=n. Symmetry preserves multiplicity.",
+      "hypotheses": [
+        "H_t and the canonical L_t are as defined in the frozen task and proof Section 1.",
+        "No RH assumption or Xi-zero simplicity assumption.",
+        "Canonical L_t is real on the positive real ray; U1 holds."
+      ],
+      "parameter_scope": "Each fixed real 0<t<1, for every sigma>Sigma and real v.",
+      "dependencies": [
+        "U1",
+        "I1: normalization and all odd phase levels",
+        "I4: evenness and conjugation"
+      ],
+      "evidence_refs": [
+        {
+          "file": "COMPLETENESS_PROOF.md",
+          "locator": "Section 4, Lemma U3, equation (4.1), phase table and boundary discussion"
+        }
+      ],
+      "limitations": [
+        "The logarithmic equation is not applied at Re w<=1; real z-zeros are excluded from the nonreal classification."
+      ]
+    },
+    {
+      "claim_id": "F1",
+      "status": "AUTHOR_PROVED",
+      "statement": "With an enlarged original starting integer N_C(t), all nonreal zeros outside the localized four-point tail form a finite multiset E_t. The closed strip includes both height boundaries; remote low-level zeros are at most N_C(t) simple first-quadrant points and their partners.",
+      "hypotheses": [
+        "H_t and the canonical L_t are as defined in the frozen task and proof Section 1.",
+        "No RH assumption or Xi-zero simplicity assumption.",
+        "Inherited closed-strip finiteness and imaginary-axis positivity I4, with qualitative LC1.",
+        "Original localization I3 holds and its closed disks eventually lie in Re w>Sigma."
+      ],
+      "parameter_scope": "Each fixed real 0<t<1; exception locations, multiplicities and thresholds may depend on t.",
+      "dependencies": [
+        "I3: Q01 Q1/Q4 and (28)–(29)",
+        "I4: qualitative Lemma 1, Section 5.1 and audit LC1",
+        "U2",
+        "U3"
+      ],
+      "evidence_refs": [
+        {
+          "file": "COMPLETENESS_PROOF.md",
+          "locator": "Section 5, Lemma F1, equations (5.1)–(5.2)"
+        }
+      ],
+      "limitations": [
+        "Central exceptions may be multiple; they are not computed.",
+        "No compact-parameter uniform bound on exceptions is asserted."
+      ]
+    },
+    {
+      "claim_id": "C1",
+      "status": "AUTHOR_PROVED",
+      "statement": "The full nonreal zero multiset equals E_t disjoint-union the original four-point orbits {z_n,conj(z_n),-z_n,-conj(z_n)} for n>=N_C(t). All tail points are simple and all tail orbits disjoint; E_t has its actual finite multiplicities.",
+      "hypotheses": [
+        "H_t and the canonical L_t are as defined in the frozen task and proof Section 1.",
+        "No RH assumption or Xi-zero simplicity assumption.",
+        "The exact original centers, radius 40/q_n and phase indices are retained.",
+        "The dependencies in F1 hold."
+      ],
+      "parameter_scope": "Every fixed real 0<t<1.",
+      "dependencies": [
+        "F1",
+        "I3: original localization and disjointness",
+        "I4: multiplicity-preserving symmetries"
+      ],
+      "evidence_refs": [
+        {
+          "file": "COMPLETENESS_PROOF.md",
+          "locator": "Section 5, Theorem C1, equation (5.3) and bounded-support consequence"
+        }
+      ],
+      "limitations": [
+        "The finite exceptional multiset is existential.",
+        "This author proof is not covered by a prior completeness audit."
+      ]
+    },
+    {
+      "claim_id": "C2",
+      "status": "AUTHOR_PROVED",
+      "statement": "The localized first-quadrant count is asymptotic to R log R/(4*pi); using proved C1, the TOTAL nonreal count with multiplicity and |z|<=R is asymptotic to R log R/pi.",
+      "hypotheses": [
+        "H_t and the canonical L_t are as defined in the frozen task and proof Section 1.",
+        "No RH assumption or Xi-zero simplicity assumption.",
+        "C1 has been proved.",
+        "Inherited coordinate asymptotics (1.9) hold."
+      ],
+      "parameter_scope": "R tends to infinity for each fixed real 0<t<1.",
+      "dependencies": [
+        "C1",
+        "I3: Q01 Q2, equation (7)",
+        "Elementary inversion of the increasing model 4*pi*n/log(n)"
+      ],
+      "evidence_refs": [
+        {
+          "file": "COMPLETENESS_PROOF.md",
+          "locator": "Section 6, Corollary C2, equations (6.1)–(6.6)"
+        }
+      ],
+      "limitations": [
+        "No radial monotonicity is assumed or proved.",
+        "No second counting term, endpoint uniformity or zeta counting formula is used."
+      ]
+    }
+  ],
+  "counting_scope": "TOTAL_NONREAL_COUNT",
+  "seed_route_assessment": {
+    "status": "VERIFIED_BY_RESEARCHER",
+    "changes": [
+      "No replacement of the proposed route or original localized sequence.",
+      "Supplied a nonoptimized explicit Sigma=a and bound Re L_t'>5/16.",
+      "Made the complete phase table, finite exceptional multiset and nonmonotone radial inversion explicit."
+    ],
+    "first_unresolved_or_invalid_step": null
+  },
+  "inherited_source_proof_sha256": "3891bc166dd7746c8952299529f0e5f3f490435ea9dd76aea114da2dc3a20667",
+  "source_files_modified": false,
+  "independent_new_audit_performed": false,
+  "rh_implication_claimed": false,
+  "runtime_settings": {
+    "model": "UNKNOWN",
+    "reasoning": "UNKNOWN",
+    "service_tier": "UNKNOWN",
+    "fresh_context": true,
+    "children": 0
+  },
+  "prior_art": {
+    "exact_match": "NO_MATCH_IN_BOUNDED_SEARCH",
+    "general_coverage": "NO_COVERING_THEOREM_FOUND_IN_BOUNDED_SEARCH",
+    "method_status": "Classical Noshiro–Warschawski univalence, inherited localization, symmetry and elementary asymptotic inversion; no new general method claimed.",
+    "world_novelty_established": false,
+    "search_scope": "Six short public topic queries and inspection of the guided Hotta–Wang criterion and Lagarias–Montague/Csordas–Smith primary comparisons.",
+    "access_limits": [
+      "Six queries and three guided primary comparisons only.",
+      "No subscription database, exhaustive multilingual or historical survey, systematic citation-network search, or specialist consultation.",
+      "Search indexing and the selected comparison scope cannot prove absence of prior work.",
+      "PDF comparisons used parsed text; no new visual page certification.",
+      "Original historical univalence and Boas/Lindelöf papers were not freshly inspected."
+    ],
+    "evidence_refs": [
+      {
+        "file": "PRIOR_ART_CHECK.md",
+        "locator": "Sections 1–4"
+      },
+      {
+        "file": "SOURCE_LEDGER.json",
+        "locator": "public_primary_sources and search"
+      }
+    ]
+  },
+  "limitations": [
+    "Author development on the explicitly inherited lemmas, not an independent new audit or formal verification.",
+    "Fixed-t scope only; optional K1 not developed.",
+    "No endpoint result, second counting term, threshold optimization, trajectory study or central exception coordinates.",
+    "No RH implication, Xi-zero simplicity assumption, or world novelty claim.",
+    "Fresh context and a read allowlist on a shared filesystem do not establish OS isolation or statistical independence."
+  ],
+  "next_stage_executed": false
+}
+

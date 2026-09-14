@@ -1,0 +1,760 @@
+{
+  "audit_id": "COSXI-STHC01",
+  "proof_hashes": {
+    "S01": "06c9f892899fcd5dad742414746a87fbc06c5058baa67df6b3dee4198abdf616",
+    "S02": "f2180957222c7cbba9d321cf1cc3dff141655f70efd250fb2335b919f95f1a7d"
+  },
+  "branches": {
+    "S01": {
+      "main_claim_id": "S01-GLOBAL",
+      "main_verdict": "PASS_AS_WRITTEN",
+      "whole_text_status": "PASS_AS_WRITTEN",
+      "reason": "All submitted S01 claims pass on their precise domains; the new uniformity is established by the actual proof rather than inherited PASS labels.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 low ordinates and every root"
+        }
+      ]
+    },
+    "S02": {
+      "main_claim_id": "S02-T",
+      "main_verdict": "PASS_AS_WRITTEN",
+      "whole_text_status": "MIXED_RESULT",
+      "reason": "The main full-oriented-boundary transfer is correct as written; the redundant component-hole inference is separately false as general geometry.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S02 domination and cluster transfer"
+        },
+        {
+          "file": "CHALLENGE_RESPONSE.md",
+          "locator": "Dependencies and consequences"
+        }
+      ]
+    }
+  },
+  "claims": [
+    {
+      "id": "S01-TRANSFER",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The strict scalar signs and A>=a0 give a unique interior graph; its phase decreases by more than 2pi and P D is nonzero at an odd level.",
+      "source_locator": "section 2 (8)-(9)",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "section 2 (8)-(9)"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 connected transfer"
+        }
+      ],
+      "scope_limits": [
+        "Conditional on the complete specified rectangle and nonzero prefactor."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": []
+    },
+    {
+      "id": "S01-RIGHT-EULER",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The original explicit constants give M=O(eta^-1), K,C=O(eta^-2); the all-height algebraic low-x bound replaces a moving compact minimum.",
+      "source_locator": "section 4 (12)-(14)",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "section 4 (12)-(14)"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 Euler-only moving range"
+        }
+      ],
+      "scope_limits": [
+        "eta>0 tends to zero with eta^-2=o(log lambda)."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S01-TRANSFER"
+      ]
+    },
+    {
+      "id": "S01-LOG",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Both checked Bellotti inputs, the canonical center value and the stated nested disk margins prove H and Z on all of the claimed band.",
+      "source_locator": "section 5 (15)-(19)",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "section 5 (15)-(19)"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 interior logarithm and explicit budgets"
+        }
+      ],
+      "scope_limits": [
+        "Canonical continuation on the specified simply connected zero-free Omega only."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": []
+    },
+    {
+      "id": "S01-CONTROL",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The derivative losses are o(log x), uniformly over the whole ray; the separate bounded-band expansion fits the explicit constant 20.",
+      "source_locator": "section 6 (20)-(22)",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "section 6 (20)-(22)"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 interior logarithm and explicit budgets"
+        }
+      ],
+      "scope_limits": [
+        "A bound on the whole eligible high ray; real value bound only on the stated bounded band."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S01-LOG"
+      ]
+    },
+    {
+      "id": "S01-LOW",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The line-one nonvanishing proof, fixed compact left extension and independent high-sigma derivative estimate cover every height.",
+      "source_locator": "section 6 before and including (23)",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "section 6 before and including (23)"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 low ordinates and every root"
+        }
+      ],
+      "scope_limits": [
+        "X0, S, eps0 and m0 are fixed before lambda; no numerical compact minimum is claimed."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": []
+    },
+    {
+      "id": "S01-LOWER",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Reflection, all-height monotonicity on X0<=x<=3lambda, bootstrap and the distant radial cutoff cover every eligible root.",
+      "source_locator": "section 7 (25), three x ranges",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "section 7 (25), three x ranges"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 low ordinates and every root"
+        }
+      ],
+      "scope_limits": [
+        "Closed height restriction and unbounded eligible heights retained."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S01-CONTROL",
+        "S01-LOW"
+      ]
+    },
+    {
+      "id": "S01-UPPER",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The complete rectangle has strict lower/upper signs and phase decrease at least 4pi; an interior odd-level crossing is a simple actual mixture root.",
+      "source_locator": "section 7 (26)-(27)",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "section 7 (26)-(27)"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 low ordinates and every root"
+        }
+      ],
+      "scope_limits": [
+        "One connected interval of x-length 16pi/log lambda; every sufficiently large allowed lambda,s."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S01-TRANSFER",
+        "S01-CONTROL"
+      ]
+    },
+    {
+      "id": "S01-GLOBAL",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The uniform lower bound and actual upper root yield the two-term minimum; finiteness of zeros in a compact disk yields attainment.",
+      "source_locator": "sections 1,7,8, equation (1)",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "sections 1,7,8, equation (1)"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 low ordinates and every root"
+        }
+      ],
+      "scope_limits": [
+        "One absolute C and lambda0 for every s in the submitted moving interval; no fixed d<1/2 extension."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S01-LOWER",
+        "S01-UPPER"
+      ]
+    },
+    {
+      "id": "S01-ABOVE",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "This is a direct allowed-s substitution into the uniform theorem, without the Euler-only lower rate restriction.",
+      "source_locator": "section 1 S01-ABOVE and section 7",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "section 1 S01-ABOVE and section 7"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 low ordinates and every root"
+        }
+      ],
+      "scope_limits": [
+        "eta_plus>0 tends to zero and is eventually <=1/2."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S01-GLOBAL"
+      ]
+    },
+    {
+      "id": "S01-BELOW",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "All s=1-eta_minus in the stated narrower known zero-free width are included uniformly.",
+      "source_locator": "section 1 S01-BELOW and section 7",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "section 1 S01-BELOW and section 7"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 low ordinates and every root"
+        }
+      ],
+      "scope_limits": [
+        "0<eta_minus<=beta(6lambda)/16; no new zero-free region."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S01-GLOBAL"
+      ]
+    },
+    {
+      "id": "S01-BELOW-ROOT",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The upper height excess divided by maximal eta_minus tends to zero, so the constructed mixture zero lies below Re w=1.",
+      "source_locator": "section 7 final width/thickness comparison",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "section 7 final width/thickness comparison"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 low ordinates and every root"
+        }
+      ],
+      "scope_limits": [
+        "Strict below-one conclusion at maximal width, not for every arbitrarily smaller eta_minus."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S01-UPPER"
+      ]
+    },
+    {
+      "id": "S02-A",
+      "branch": "S02",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Explicit non-arithmetic terms have an effective O_delta(1) bound; the stated one-sided arithmetic condition implies positivity and the chart chain rule.",
+      "source_locator": "section 6 (23)-(26)",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 6 (23)-(26)"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S02 phases, conditional arcs and nonvacuity"
+        }
+      ],
+      "scope_limits": [
+        "Off zeros with actual local/pathwise logarithms; no global zero-free C or positivity distribution asserted."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": []
+    },
+    {
+      "id": "S02-M",
+      "branch": "S02",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The disk upper bound, Euler anchor, Jensen radius ratio, Blaschke cancellation and Harnack factor establish the exact loss; omitted-zero bands are separated.",
+      "source_locator": "section 3 (12)-(15)",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 3 (12)-(15)"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S02 minimum modulus"
+        }
+      ],
+      "scope_limits": [
+        "T>=10, stated real/ordinate band and distance d; specialization uses C,E and r<h."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": []
+    },
+    {
+      "id": "S02-E",
+      "branch": "S02",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Three valid strict-cutoff dyadic applications give M<=Q; disk chains bound diameter and hypothesis (3) places every relevant closure inside C.",
+      "source_locator": "sections 1-2, (6), (9)-(11)",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "sections 1-2, (6), (9)-(11)"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S02 charge and geometry"
+        }
+      ],
+      "scope_limits": [
+        "Multiplicity charge differs from disk count; holes and nested components are allowed."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": []
+    },
+    {
+      "id": "S02-T",
+      "branch": "S02",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The existing full-oriented-boundary homotopy preserves M_j; two partial counts in [0,M_j] yield the boundary charge for open and closed windows.",
+      "source_locator": "section 1 theorem items 1-4; sections 4-5",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 1 theorem items 1-4; sections 4-5"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S02 domination and cluster transfer"
+        },
+        {
+          "file": "CHALLENGE_RESPONSE.md",
+          "locator": "Dependencies and consequences"
+        }
+      ],
+      "scope_limits": [
+        "Full relevant components, all analytic multiplicities and original boundary zeros; no off-axis zero existence claim."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S02-M",
+        "S02-E",
+        "S02-DOMINATION"
+      ]
+    },
+    {
+      "id": "S02-P",
+      "branch": "S02",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "A global small correction logarithm gives endpoint phase error, exact closed windings and full component residue charge, independent of path length.",
+      "source_locator": "section 5 (20)-(22) and residue identities",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 5 (20)-(22) and residue identities"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S02 phases, conditional arcs and nonvacuity"
+        },
+        {
+          "file": "CHALLENGE_RESPONSE.md",
+          "locator": "Dependencies and consequences"
+        }
+      ],
+      "scope_limits": [
+        "One full oriented boundary cycle per component; repeated detours retain winding multiplicities."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S02-E",
+        "S02-M",
+        "S02-T",
+        "S02-DOMINATION"
+      ]
+    },
+    {
+      "id": "S02-G",
+      "branch": "S02",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Every supplied arc has monotone phase; counting odd levels in each open phase interval loses at most one per arc and yields simple distinct crossings.",
+      "source_locator": "section 6 (27) and proof",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 6 (27) and proof"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S02 phases, conditional arcs and nonvacuity"
+        }
+      ],
+      "scope_limits": [
+        "Conditional on J supplied disjoint balanced arcs and A>=kappa log T; no arc supply is established."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S02-A"
+      ]
+    },
+    {
+      "id": "S01-MINIMIZER-PHASE",
+      "branch": "S01",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The radial bracket first bounds x, all-height integration bounds sigma, and the direct canonical imaginary expansion gives n~lambda log(lambda)/pi^2.",
+      "source_locator": "section 7 attainment, minimizer and phase paragraphs",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S01/PROOF.md",
+          "locator": "section 7 attainment, minimizer and phase paragraphs"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S01 low ordinates and every root"
+        }
+      ],
+      "scope_limits": [
+        "Every minimizing first-quadrant representative; phase index is neither radial rank nor a trajectory."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S01-GLOBAL",
+        "S01-CONTROL"
+      ]
+    },
+    {
+      "id": "S02-DOMINATION",
+      "branch": "S02",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The verified log-Gamma estimate and constant 6 combine with -F(T) to give exactly |c/P|<=1/(4T) under the submitted Lambda(T).",
+      "source_locator": "section 4 (17)-(19)",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 4 (17)-(19)"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S02 domination and cluster transfer"
+        }
+      ],
+      "scope_limits": [
+        "Entire C minus E and component boundaries; lambda>=Lambda(T) only implies T=O(lambda)."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S02-M",
+        "S02-E"
+      ]
+    },
+    {
+      "id": "S02-PAIRING",
+      "branch": "S02",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "Equal finite multisets in each full component admit a multiplicity-respecting bijection, with every pair bounded by its diameter.",
+      "source_locator": "section 4 final paragraph",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 4 final paragraph"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S02 domination and cluster transfer"
+        },
+        {
+          "file": "CHALLENGE_RESPONSE.md",
+          "locator": "Dependencies and consequences"
+        }
+      ],
+      "scope_limits": [
+        "No uniqueness, simplicity, trajectories or matching restricted to the original window."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": [
+        "S02-T"
+      ]
+    },
+    {
+      "id": "S02-TOPOLOGY-SENTENCE",
+      "branch": "S02",
+      "verdict": "FALSE_STATEMENT",
+      "reason": "A separate disk component can lie inside a hole of another; disk-center membership in E does not imply membership in the surrounding component.",
+      "source_locator": "section 4 sentence following full-boundary homotopy",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 4 sentence following full-boundary homotopy"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "First issue, late comparison and limits"
+        },
+        {
+          "file": "CHALLENGE_RESPONSE.md",
+          "locator": "Dependencies and consequences"
+        }
+      ],
+      "scope_limits": [
+        "FALSE_STATEMENT refers to the component-hole geometric inference; no actual zeta realization or zeta-zero counterexample is asserted."
+      ],
+      "required_clarifications": [
+        "Delete the redundant aside or identify C minus the entire union E, rather than bounded holes of an individual component."
+      ],
+      "first_issue": "The component-hole geometric inference after the full-boundary homotopy in section 4.",
+      "depends_on": []
+    },
+    {
+      "id": "S02-NONVACUITY",
+      "branch": "S02",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The coefficient, exponential and exact integer inequalities give Q/T<10^-5 and imply both height conditions.",
+      "source_locator": "section 1 explicit delta=1/4 example",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 1 explicit delta=1/4 example"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S02 phases, conditional arcs and nonvacuity"
+        }
+      ],
+      "scope_limits": [
+        "Parameter calculation only; no zeta evaluation or root numerics."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": []
+    },
+    {
+      "id": "S02-SCOPE-DISTINCTION",
+      "branch": "S02",
+      "verdict": "PASS_AS_WRITTEN",
+      "reason": "The proof explicitly limits the graph result, and domination implies lambda+log|P|>=log(4T)>0 on C minus E.",
+      "source_locator": "section 6 final scope paragraphs",
+      "evidence_refs": [
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 6 final scope paragraphs"
+        },
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "S02 phases, conditional arcs and nonvacuity"
+        }
+      ],
+      "scope_limits": [
+        "Fixed delta and expanding-window comparison; no new zeta density or radial minimum."
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "depends_on": []
+    }
+  ],
+  "dependency_resolutions": [
+    {
+      "claim_id": "S02-T",
+      "dependency_id": "S02-TOPOLOGY-SENTENCE",
+      "explanation": "Not a premise: the original full domain-oriented boundary has index zero around every excluded hole, and the original homotopy counts only U_j. No independent replacement argument or narrowed main conclusion is used.",
+      "evidence_refs": [
+        {
+          "file": "CHALLENGE_RESPONSE.md",
+          "locator": "What the existing boundary argument counts"
+        },
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 4 full-oriented-boundary homotopy"
+        }
+      ]
+    },
+    {
+      "claim_id": "S02-P",
+      "dependency_id": "S02-TOPOLOGY-SENTENCE",
+      "explanation": "Not a premise: the original full domain-oriented boundary has index zero around every excluded hole, and the original homotopy counts only U_j. No independent replacement argument or narrowed main conclusion is used.",
+      "evidence_refs": [
+        {
+          "file": "CHALLENGE_RESPONSE.md",
+          "locator": "What the existing boundary argument counts"
+        },
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 4 full-oriented-boundary homotopy"
+        }
+      ]
+    },
+    {
+      "claim_id": "S02-PAIRING",
+      "dependency_id": "S02-TOPOLOGY-SENTENCE",
+      "explanation": "Not a premise: the original full domain-oriented boundary has index zero around every excluded hole, and the original homotopy counts only U_j. No independent replacement argument or narrowed main conclusion is used.",
+      "evidence_refs": [
+        {
+          "file": "CHALLENGE_RESPONSE.md",
+          "locator": "What the existing boundary argument counts"
+        },
+        {
+          "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+          "locator": "section 4 full-oriented-boundary homotopy"
+        }
+      ]
+    }
+  ],
+  "topology_dependency": {
+    "main_argument_status": "NOT_NEEDED_FOR_FULL_ORIENTED_BOUNDARY",
+    "reason": "Nested components invalidate the aside but the declared full boundary excludes their zeros from the surrounding domain count.",
+    "evidence_refs": [
+      {
+        "file": "CHALLENGE_RESPONSE.md",
+        "locator": "Explicit permitted geometric configuration"
+      },
+      {
+        "file": "CHALLENGE_RESPONSE.md",
+        "locator": "What the existing boundary argument counts"
+      }
+    ]
+  },
+  "conditional_scope": {
+    "S02_G_is_conditional": true,
+    "unconditional_positive_A_graph_supply_claimed": false,
+    "rho_simplicity_assumed": false,
+    "reason": "The full proof conditions on actual supplied arcs, retains multiplicities, and explicitly observes that balance cannot occur on C minus E under domination.",
+    "evidence_refs": [
+      {
+        "file": "AUDIT_REPORT.md",
+        "locator": "S02 phases, conditional arcs and nonvacuity"
+      },
+      {
+        "file": "evidence/released_inputs/source/delivery/researchers/COSXI-S02/PROOF.md",
+        "locator": "section 6 (27) and final paragraphs"
+      }
+    ]
+  },
+  "prior_art": {
+    "S01": {
+      "exact_match": "NO_MATCH_IN_BOUNDED_SEARCH",
+      "general_coverage": "KNOWN_METHOD_ONLY",
+      "new_zeta_information": "KNOWN_INPUT_REUSED",
+      "world_novelty_established": false,
+      "reason": "The precise complete quantitative mixture theorem was not matched in the bounded public search. Necessary known inputs and specific general-method coverage are distinguished from exact theorem coverage.",
+      "evidence_refs": [
+        {
+          "file": "PRIOR_ART_AUDIT.md",
+          "locator": "S01 comparison"
+        },
+        {
+          "file": "INPUT_OUTPUT_ASSESSMENT.md",
+          "locator": "S01"
+        }
+      ]
+    },
+    "S02": {
+      "exact_match": "NO_MATCH_IN_BOUNDED_SEARCH",
+      "general_coverage": "PARTIAL_COVERAGE",
+      "new_zeta_information": "KNOWN_INPUT_REUSED",
+      "world_novelty_established": false,
+      "reason": "The precise complete quantitative mixture theorem was not matched in the bounded public search. Necessary known inputs and specific general-method coverage are distinguished from exact theorem coverage.",
+      "evidence_refs": [
+        {
+          "file": "PRIOR_ART_AUDIT.md",
+          "locator": "S02 comparison and checked general coverage"
+        },
+        {
+          "file": "INPUT_OUTPUT_ASSESSMENT.md",
+          "locator": "S02"
+        }
+      ]
+    }
+  },
+  "scope": {
+    "proofs_read": {
+      "S01": true,
+      "S02": true
+    },
+    "outline_before_proofs": true,
+    "initial_queries_before_author_ledgers": true,
+    "topology_note_after_first_notes": true,
+    "model": "UNKNOWN",
+    "reasoning": "UNKNOWN",
+    "service_tier": "UNKNOWN",
+    "limitations": [
+      "One fresh audit context with shared-filesystem path controls, not OS isolation or statistical independence.",
+      "Deep published arithmetic theorems accepted after statement/version/hypothesis inspection; their entire proofs not re-audited.",
+      "Bounded prior-art search only; no world novelty, latest-bound or expert endorsement claim.",
+      "Necessary predecessor scopes inspected; unrelated fixed-t results not re-audited.",
+      "No numerical lambda0 or zero-location computation.",
+      "The topology counterexample tests a general inference and is not an actual zeta-zero configuration."
+    ],
+    "private_upload_performed": false,
+    "numerics": "Small exact integer/parameter checks only; no root scans or zeta evaluations."
+  },
+  "source_edited": false
+}

@@ -1,0 +1,233 @@
+{
+  "audit_id": "COSXI-QHC01",
+  "source_proof_sha256": "3891bc166dd7746c8952299529f0e5f3f490435ea9dd76aea114da2dc3a20667",
+  "main_localization_verdict": "PASS_AS_WRITTEN",
+  "geometry_verdict": "PASS_AS_WRITTEN",
+  "whole_analytic_package_verdict": "PASS_AS_WRITTEN",
+  "claims": [
+    {
+      "claim_id": "Q0",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "§2, (11)–(18)",
+      "reason": "Normalization, analytic branches, exact regrouping and multiplicity-preserving phase reduction checked directly.",
+      "evidence_refs": [
+        "AUDIT_REPORT.md §1"
+      ],
+      "depends_on": [],
+      "required_clarifications": [],
+      "scope_limits": [
+        "Re(w)>1; all odd phase levels."
+      ]
+    },
+    {
+      "claim_id": "Q1",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "§1; §§4–6, (1)–(6)",
+      "reason": "Q4 applies throughout an eventual tail; ordered disjoint real projections give distinct simple zeros and strict increasing real parts.",
+      "evidence_refs": [
+        "AUDIT_REPORT.md §§3–5"
+      ],
+      "depends_on": [
+        "Q0",
+        "Q4"
+      ],
+      "required_clarifications": [],
+      "scope_limits": [
+        "One exhibited tail family, not all large nonreal zeros."
+      ]
+    },
+    {
+      "claim_id": "Q2",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "§1 (7)–(10); §6 (38)–(40)",
+      "reason": "Exact derivatives and finite-step integration give the claimed errors; using alpha=log(U/a) removes the potential log-log loss in the y(x) relation.",
+      "evidence_refs": [
+        "AUDIT_REPORT.md §5"
+      ],
+      "depends_on": [
+        "Q1"
+      ],
+      "required_clarifications": [],
+      "scope_limits": [
+        "The localized sequence, for fixed t, and uniformly on fixed compact K."
+      ]
+    },
+    {
+      "claim_id": "Q3",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "§3, (19)–(20)",
+      "reason": "All four value and derivative contributions satisfy their constants on the full half-plane; the extended-sector Cauchy circle is valid.",
+      "evidence_refs": [
+        "AUDIT_REPORT.md §2"
+      ],
+      "depends_on": [],
+      "required_clarifications": [],
+      "scope_limits": [
+        "Re(w)>=2, uniform in Im(w), independent of t."
+      ]
+    },
+    {
+      "claim_id": "Q4",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "§5, (30)–(36)",
+      "reason": "The finite hypotheses yield remainder<20/U and boundary linear term>40/U; full-disk |G|<1 excludes other levels and preserves the exact one-zero count for H.",
+      "evidence_refs": [
+        "AUDIT_REPORT.md §4"
+      ],
+      "depends_on": [
+        "Q0",
+        "Q3"
+      ],
+      "required_clarifications": [],
+      "scope_limits": [
+        "Every individual index satisfying precisely (30)–(31); only (19) of Q3 is used."
+      ]
+    },
+    {
+      "claim_id": "ADD21",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "§3, (21)",
+      "reason": "The first reciprocal terms sum to -5/(6w), with uniform sector and exponential remainder control.",
+      "evidence_refs": [
+        "AUDIT_REPORT.md §2"
+      ],
+      "depends_on": [],
+      "required_clarifications": [],
+      "scope_limits": [
+        "Re(w)>=2 as |w| tends to infinity; not used for Q1/Q4."
+      ]
+    },
+    {
+      "claim_id": "ADD22_23",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "§3, (22)–(23)",
+      "reason": "Both real equations are the exact real and imaginary parts of L=-iq with the given signs.",
+      "evidence_refs": [
+        "AUDIT_REPORT.md §3"
+      ],
+      "depends_on": [
+        "Q0"
+      ],
+      "required_clarifications": [],
+      "scope_limits": [
+        "Inherited Re(w)>1 and x>0; the quoted error estimate requires sigma>=2. No claim of Euler-log convergence for 0<sigma<=1."
+      ]
+    },
+    {
+      "claim_id": "ADD37",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "§5, (37)",
+      "reason": "Q3 derivative bound and the already-proved escape of Re(u) make E prime O(U^-2); the explicit derivative varies by O(U^-1) on each full disk.",
+      "evidence_refs": [
+        "AUDIT_REPORT.md §5"
+      ],
+      "depends_on": [
+        "Q0",
+        "Q3"
+      ],
+      "required_clarifications": [],
+      "scope_limits": [
+        "Eventual localization disks, fixed t; not needed to prove Q4 simplicity."
+      ]
+    },
+    {
+      "claim_id": "UNIFORM_K",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "§7",
+      "reason": "D_t is bounded on fixed compact K, giving common correction bounds and thresholds; other estimates are independent of t.",
+      "evidence_refs": [
+        "AUDIT_REPORT.md §5"
+      ],
+      "depends_on": [
+        "Q1",
+        "Q2",
+        "Q4",
+        "ADD37"
+      ],
+      "required_clarifications": [],
+      "scope_limits": [
+        "Each fixed compact K contained in (0,1), with no endpoint uniformity."
+      ]
+    },
+    {
+      "claim_id": "N1",
+      "verdict": "NOT_CHECKED_OPTIONAL",
+      "source_locator": "RESULT.json N1; author evidence/DIAGNOSTICS.json",
+      "reason": "Optional numerical reproduction was not performed. Author numerical claims are not analytical premises and remain unverified here.",
+      "evidence_refs": [
+        "AUDIT_REPORT.md Scope and limits"
+      ],
+      "depends_on": [],
+      "required_clarifications": [],
+      "scope_limits": [
+        "Zero optional numerical points; no scan; no interval certification."
+      ]
+    }
+  ],
+  "prior_art": {
+    "exact_family_status": "NO_MATCH_IN_BOUNDED_SEARCH",
+    "quantitative_coverage_status": "NO_COVERING_THEOREM_FOUND_IN_BOUNDED_SEARCH",
+    "method_status": "KNOWN_APPLICATION: leading-phase Lambert inversion, linear correction, sector remainder estimates and Rouche. The coverage label means no earlier asymptotic theorem covering the specific package was found; general Rouche certainly applies once its hypotheses are proved.",
+    "world_novelty_established": false,
+    "comparisons": [
+      {
+        "source": "Lagarias–Montague, The Integral of the Riemann xi-Function, arXiv:1106.4348v3",
+        "exact_locator": "Theorem 2.2 p. 6; Lemma 3.3 p. 10; Lemma 5.1 p. 18",
+        "access_status": "Primary PDF independently downloaded; these three complete pages visually inspected",
+        "comparison": "Related leading curve and Gamma/zeta growth estimates; a different function and level equation.",
+        "hypothesis_mapping": "Their J(s)=integral xi and constant alpha_0 cannot be replaced by xi(w) and the variable level -kappa*cosh(w-1/2).",
+        "what_is_not_covered": "The additive family, phase-indexed centers, O(1/n) disks, and simplicity."
+      },
+      {
+        "source": "Csordas–Smith, Level sets and the distribution of zeros of entire functions",
+        "exact_locator": "Definitions 1.1–1.2 pp. 1–3; Theorem 1.3 p. 4; Lindelof discussion p. 5",
+        "access_status": "Primary author PDF independently downloaded; pp. 1–5 read, pp. 4–5 visually inspected",
+        "comparison": "Weighted real shifts and classical growth/zero-count background.",
+        "hypothesis_mapping": "Setting f=Xi yields e^(i theta)Xi(z+b)+e^(-i theta)Xi(z-b), for real b nonzero, not the audited additive mixture.",
+        "what_is_not_covered": "Individual localization, audited finite criterion, and the additive mixture. Original Boas/Lindelof sources not read."
+      },
+      {
+        "source": "Borwein–Corless, Gamma and Factorial in the Monthly, arXiv:1703.05349",
+        "exact_locator": "Preprint pp. 18–19, equations (61)–(70)",
+        "access_status": "Primary PDF independently discovered and downloaded; both pages visually inspected",
+        "comparison": "Leading Stirling inversion using Lambert W and inverse-gamma corrections document a known method.",
+        "hypothesis_mapping": "Their positive-real inverse Gamma problem reduces to u log(u/e)=log(x/sqrt(2pi)); audited problem has complex -2iq, altered prefactors and zeta/cosh remainder.",
+        "what_is_not_covered": "Complex disk bounds or a one-zero theorem for the audited family. Formula (70) is expressly not proved there."
+      },
+      {
+        "source": "Salvy, Asymptotics of Implicit Functions and Computer Algebra, institutional seminar account",
+        "exact_locator": "Sections 3–5, especially section 5 real exp-log/Hardy-field statement; author bibliography entry Salvy 1994",
+        "access_status": "Institutional HTML and author bibliographic abstract read; original 1994 article and cited underlying theorems not read",
+        "comparison": "General asymptotic-inversion methods, without a verified covering theorem here.",
+        "hypothesis_mapping": "Real exp-log solutions at real infinity are not a checked match for the complex phase and its zeta/exponential remainder.",
+        "what_is_not_covered": "Complex multiplicity count, simplicity and radius 40/q."
+      }
+    ],
+    "search_scope": "Seven initial independent queries frozen before author-log release, then five targeted follow-up queries and independent primary-source retrieval. Author named leads are distinguished from independently discovered inverse-gamma/inversion leads.",
+    "access_limitations": [
+      "No exhaustive historical or subscription-database search.",
+      "Boas/Lindelof originals not read.",
+      "Salvy original 1994 article and cited general theorems not read.",
+      "Bessel and Corless et al. initial leads were not pursued to full text."
+    ]
+  },
+  "scope": {
+    "full_proof_read": true,
+    "fresh_context": true,
+    "outline_first": true,
+    "source_preservation": "No released source edited or script executed. Proof digest matched the frozen CLAIM_MATRIX value. Only staged allowlisted inputs and primary/operational sources were read.",
+    "numerics": "N1 NOT_CHECKED_OPTIONAL; zero numerical root points; no zero scan or interval claim.",
+    "model": "UNKNOWN",
+    "reasoning": "UNKNOWN",
+    "service_tier": "UNKNOWN",
+    "limitations": [
+      "Fresh context and read allowlist on shared filesystem, not OS sandbox or statistical independence.",
+      "Phase-2 checklist and RESULT exposed named literature leads before the independent search; author search log/evidence was still withheld.",
+      "Initial search JSON manually entered timestamp is inaccurate; frozen bytes were kept, exact filesystem time and ROOT staged receipt govern chronology.",
+      "No RH, completeness, optimal threshold, endpoint, trajectory, historical-priority or publication-significance conclusion.",
+      "Independent review, not formal verification; no claim about previous qualitative audit."
+    ]
+  },
+  "frozen_source_edited": false,
+  "rh_implication_claimed": false
+}

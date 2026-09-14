@@ -1,0 +1,319 @@
+{
+  "audit_id": "COSXI-CHC01",
+  "source_proof_sha256": "dd8272fd7b87002f434a95a48051ce60fff786bc0d88c6c538ccb45a0cdc9dcc",
+  "inherited_proof_hashes": {
+    "quantitative": "3891bc166dd7746c8952299529f0e5f3f490435ea9dd76aea114da2dc3a20667",
+    "qualitative_v1": "9a8090b7a4fc3f1723f74638ac472b0265631f2886fe829bdddd3fb62a8c83f4"
+  },
+  "overall_increment_verdict": "PASS_AS_WRITTEN",
+  "completeness_verdict": "PASS_AS_WRITTEN",
+  "total_nonreal_count_verdict": "PASS_AS_WRITTEN",
+  "claims": [
+    {
+      "claim_id": "U1",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Section 2; (2.1)-(2.2)",
+      "reason": "All three losses are strictly below 1/16 on the full closed half-plane, so Re L_t'>5/16; the derivative remainder is independently checked and t-independent.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "2. U1: positive real derivative"
+        }
+      ],
+      "depends_on": [
+        "I1",
+        "I2"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "Closed Re w>=a; common to all real 0<t<1; no optimized threshold or uniform exception bound."
+      ]
+    },
+    {
+      "claim_id": "U2",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Section 3; (3.1) and simplicity paragraph",
+      "reason": "The segment quotient has strictly positive real part on the convex open half-plane; at an odd level -L_t' is nonzero, preserving simplicity through the prefactor and affine map.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "3. U2: injectivity and simplicity"
+        }
+      ],
+      "depends_on": [
+        "U1",
+        "I1"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "Open Re w>a; no surjectivity, central simplicity or Xi-zero simplicity assertion."
+      ]
+    },
+    {
+      "claim_id": "U3",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Section 4; (4.1), phase table and symmetry paragraphs",
+      "reason": "The real-ray normalization and oriented vertical integral give sign v; v=-x yields m=-n-1 for negative odd levels and m=n for upper-left partners, with multiplicities preserved.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "4. U3: phase signs, indices and axes"
+        }
+      ],
+      "depends_on": [
+        "U1",
+        "I1",
+        "I4"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "y>a-1/2 in the upper half-plane; no logarithmic assertion on Re w<=1; imaginary-axis exclusion separately from I4."
+      ]
+    },
+    {
+      "claim_id": "F1",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Section 5; (5.1)-(5.2)",
+      "reason": "The original disks eventually all lie in the univalence domain. Closed-strip finiteness and at most one preimage for each finitely many low phases give a finite multiset complement; every high phase is already represented.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "5. F1: the finite complement"
+        }
+      ],
+      "depends_on": [
+        "I3",
+        "I4",
+        "U2",
+        "U3"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "For each fixed t; closed height boundaries included; low levels need not exist; exceptions may be multiple."
+      ]
+    },
+    {
+      "claim_id": "C1",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Section 5; (5.3) and bounded-support consequence",
+      "reason": "Both multiset containments, disjoint low/high/strip parts, four distinct simple orbit points, and disjoint original indexed tail orbits are established. Bounded support follows from finite multiplicity.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "6. C1: exact multiset equality"
+        }
+      ],
+      "depends_on": [
+        "F1",
+        "I3",
+        "I4"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "Original phase indices retained; only starting index enlarged; fixed-t exception multiset is existential."
+      ]
+    },
+    {
+      "claim_id": "C2",
+      "verdict": "PASS_AS_WRITTEN",
+      "source_locator": "Section 6; (6.1)-(6.6)",
+      "reason": "Model inversion and a closed-inequality epsilon sandwich prove the sequence count without monotone actual radii. Validated C1 gives exact factor four plus bounded exceptional multiplicity and the full coefficient 1/pi.",
+      "evidence_refs": [
+        {
+          "file": "AUDIT_REPORT.md",
+          "locator": "7. C2: sequence count, factor four and total count"
+        }
+      ],
+      "depends_on": [
+        "C1",
+        "I3"
+      ],
+      "required_clarifications": [],
+      "first_issue": null,
+      "scope_limits": [
+        "All nonreal H_t zeros counted with analytic multiplicity and |z|<=R; each fixed 0<t<1; no second term or endpoint uniformity."
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "dependency_id": "I1",
+      "status": "CHECKED_REQUIRED_SCOPE",
+      "original_locators": [
+        "source/quantitative/QUANTITATIVE_PROOF.md section 2, (11)-(18)"
+      ],
+      "checked_scope": "Canonical real-ray logarithms, xi reflection, nonzero prefactor, exact decomposition constants, all odd levels, affine signs and multiplicity preservation.",
+      "evidence_refs": [
+        {
+          "file": "DEPENDENCY_CHECK.md",
+          "locator": "2. I1: canonical analytic reduction"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "dependency_id": "I2",
+      "status": "CHECKED_REQUIRED_SCOPE",
+      "original_locators": [
+        "source/quantitative/QUANTITATIVE_PROOF.md section 3, Q3, (19)-(20), including the Cauchy-circle derivation"
+      ],
+      "checked_scope": "Entire Re w>=2 derivative bound, uniform in imaginary part and t-independent; exact sector remainder statement, Cauchy circle and all four term estimates.",
+      "evidence_refs": [
+        {
+          "file": "DEPENDENCY_CHECK.md",
+          "locator": "3. I2: full-half-plane derivative remainder"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "dependency_id": "I3",
+      "status": "CHECKED_REQUIRED_SCOPE",
+      "original_locators": [
+        "source/quantitative/QUANTITATIVE_PROOF.md Q1-Q2; section 4 (24)-(29); section 5 (30)-(36); section 6 (38)-(40)"
+      ],
+      "checked_scope": "Every sufficiently large original index, radius40/q_n, correct W_0 model, exact -iq_n phase, one simple first-quadrant zero, disjoint tail disks, Re u_n escape, correction limit and both leading coordinate asymptotics.",
+      "evidence_refs": [
+        {
+          "file": "DEPENDENCY_CHECK.md",
+          "locator": "4. I3: original indexed existence, exact phase and geometry"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "dependency_id": "I4",
+      "status": "CHECKED_REQUIRED_SCOPE",
+      "original_locators": [
+        "source/qualitative/PROOF_V1_RU.md sections 2.1-2.2, section3 Lemma1, section5.1",
+        "source/qualitative/PROOF_V1_1_RU.md section3 LC1"
+      ],
+      "checked_scope": "Entirety, evenness, conjugation, positive imaginary-axis values, finite total multiplicity of nonreal zeros in each closed unbounded horizontal strip; periodic off-disk lower bound and wider-strip circle estimate.",
+      "evidence_refs": [
+        {
+          "file": "DEPENDENCY_CHECK.md",
+          "locator": "5. I4: symmetry, axis positivity and the closed unbounded strip"
+        }
+      ],
+      "issues": [
+        "V1's LC1 is already incorporated in V1.1 and the submitted increment; no additional clarification or new premise is required here."
+      ]
+    }
+  ],
+  "counting_logic": {
+    "sequence_count_verdict": "PASS_AS_WRITTEN",
+    "conditional_factor_four_verdict": "PASS_AS_WRITTEN",
+    "new_total_count_validated": true,
+    "count_definition": "All nonreal zeros of H_t, not only the exhibited sequence",
+    "cutoff": "|z| <= R",
+    "multiplicity": "analytic multiplicity",
+    "parameter_scope": "For each fixed real t with 0 < t < 1",
+    "reason": "Original sequence count is asymptotic to R log R/(4*pi) without radial monotonicity; checked C1 gives exact N=4A+E, with finite multiplicity remainder. This establishes the total count R log R/pi within the stated unconditional mathematical scope.",
+    "evidence_refs": [
+      {
+        "file": "AUDIT_REPORT.md",
+        "locator": "7. C2: sequence count, factor four and total count"
+      },
+      {
+        "file": "DEPENDENCY_CHECK.md",
+        "locator": "6. Dependency graph and administrative comparisons"
+      }
+    ]
+  },
+  "prior_art": {
+    "exact_family_status": "NO_MATCH_IN_BOUNDED_SEARCH",
+    "completeness_coverage": "NO_COVERING_THEOREM_FOUND_IN_BOUNDED_SEARCH",
+    "total_count_coverage": "NO_COVERING_THEOREM_FOUND_IN_BOUNDED_SEARCH",
+    "method_status": "Classical convex-domain univalence, canonical phase reduction, inherited Rouche localization, symmetry and elementary radial inversion. U2 is covered by the known criterion; no new general method is claimed.",
+    "world_novelty_established": false,
+    "comparisons": [
+      {
+        "source": "Hotta-Wang, Quasiconformal extendibility of integral transforms of Noshiro-Warschawski functions",
+        "exact_locator": "Section 1.2, Theorem 1.A",
+        "access_status": "Author HTML theorem and formula inspected",
+        "classification": "KNOWN_CRITERION_APPLICABLE",
+        "hypothesis_mapping": "f=L_t, D={Re w>a}, rotation c=0; analyticity from I1, nonconstancy and Re derivative>0 from U1; D convex.",
+        "coverage_scope": "Global injectivity in U2; partial classical method coverage.",
+        "limits": "Does not supply attained levels, original existence, strip complement, index matching, radial inversion, or total count."
+      },
+      {
+        "source": "Lagarias-Montague, The Integral of the Riemann xi-Function",
+        "exact_locator": "Theorem 2.2 p.6; discussion pp.7-8",
+        "access_status": "Fresh PDF and relevant complete pages visually inspected",
+        "classification": "RELATED_ONLY",
+        "hypothesis_mapping": "Their primitive J(s) at a constant level alpha differs from xi(w) at -((1-t)/t)cosh(w-1/2); variable levels cannot be substituted.",
+        "coverage_scope": "Related location curve; kernel dependency separately valid.",
+        "limits": "No C1 or C2 coverage. Their discussion leaves leading count unresolved for their primitive levels at those locators."
+      },
+      {
+        "source": "Csordas-Smith, Level sets and the distribution of zeros of entire functions",
+        "exact_locator": "Definitions 1.1-1.2 pp.1,3; Theorem 1.3 p.4; Lindelof paragraph p.5",
+        "access_status": "Fresh PDF and these pages visually inspected",
+        "classification": "RELATED_ONLY",
+        "hypothesis_mapping": "f=Xi yields weighted real translates of Xi, not a cosine plus Xi. The Lindelof criterion controls boundedness of n(r)/r versus type, not the desired coefficient.",
+        "coverage_scope": "Qualitative growth/count background, not new indexed completeness or precise total count.",
+        "limits": "Original Boas/Lindelof texts not read; previous qualitative coverage status not re-audited."
+      },
+      {
+        "source": "Heittokangas-Wen, The asymptotic number of zeros of exponential sums in critical strips",
+        "exact_locator": "(1.2) p.2; Theorem 2.1 p.5",
+        "access_status": "Fresh PDF; pages2 and5 visually inspected",
+        "classification": "RELATED_METHOD_NOT_COVERAGE",
+        "hypothesis_mapping": "The theorem requires a finite constant-coefficient sum with constant linear exponents. Our phase contains w Log w and variable lower terms; 1+exp L alone does not satisfy that linear-coordinate hypothesis.",
+        "coverage_scope": "General exponential-sum counting comparison.",
+        "limits": "Passing to ell=L(w) still needs injectivity, attained levels, complement and radial map; no direct C1/C2 coverage."
+      }
+    ],
+    "search_scope": "Three initial public topic/formula queries before author ledger, then three follow-up queries and precise primary theorem comparisons; inherited source dependencies independently checked.",
+    "access_limitations": [
+      "No subscription indexes, exhaustive multilingual/historical survey, citation-network campaign or specialist consultation.",
+      "Web screenshot calls exposed no image data; fresh urllib PDF downloads and Poppler viewing supplied actual visual evidence.",
+      "PowerShell TLS downloads failed; urllib succeeded without changing environment settings.",
+      "DLMF TeX content type unsupported in web tool; exact HTML formula subsequently read.",
+      "No full-paper audits; only named primary locators substantiate comparisons.",
+      "Gardner, Boas/Lindelof historical texts and inverse-gamma/Salvy leads were disclosed but not independently retrieved here because they are not required increment premises."
+    ],
+    "evidence_refs": [
+      {
+        "file": "PRIOR_ART_AUDIT.md",
+        "locator": "Sections 1-6"
+      },
+      {
+        "file": "SOURCE_LEDGER.json",
+        "locator": "queries, sources and comparisons"
+      },
+      {
+        "file": "INDEPENDENT_SEARCH_START.json",
+        "locator": "actual_initial_results and disclosed_source_names_before_search"
+      }
+    ]
+  },
+  "scope": {
+    "full_increment_read": true,
+    "fresh_context": true,
+    "outline_first": true,
+    "initial_search_before_author_ledger": true,
+    "source_names_visible_before_initial_search": "Hotta-Wang/Noshiro-Warschawski, DLMF, Lagarias-Montague, Gardner, Csordas-Smith/Lindelof/Boas, plus historical audit labels embedded in permitted phase-2 source prose. Full author ledgers and inherited reports read only after phase-3 release.",
+    "inherited_audits_read_after_initial_checks": true,
+    "source_preservation": "All 34 staged released files copied byte-for-byte into evidence/released_inputs and retained. Original proof hashes match frozen constants. Early outline, initial search and phase-2 notes unchanged; no frozen source edit.",
+    "model": "UNKNOWN",
+    "reasoning": "UNKNOWN",
+    "service_tier": "UNKNOWN",
+    "numerics": "No root computation, scan, threshold search, optional diagnostic or source script execution. Administrative schema/hash/reference checks and public PDF rendering only.",
+    "limitations": [
+      "One language-agent mathematical audit, not formal verification or human review.",
+      "Fresh context and staged allowlist on shared filesystem do not prove OS isolation or statistical independence.",
+      "ROOT receipts record observable release/hash chronology only; no private cognitive or external priority notarization claim.",
+      "Old N1 malformed locator and manual timestamp qualification are preserved; not I1-I4 premises.",
+      "Qualitative LC1 already incorporated; no new audit of every V1.1 or earlier endpoint/growth result.",
+      "No K1, uniform exceptions, endpoints, second term, optimized thresholds, trajectories, central-root coordinates, manuscript edit, RH implication or novelty conclusion."
+    ]
+  },
+  "frozen_source_edited": false,
+  "rh_implication_claimed": false
+}

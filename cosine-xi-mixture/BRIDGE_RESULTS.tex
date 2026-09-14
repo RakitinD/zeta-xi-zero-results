@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.92in]{geometry}
+\usepackage{amsmath,amssymb,hyperref}
+\usepackage[T1]{fontenc}
+\hypersetup{hidelinks}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\title{Supplementary COS--$\Xi$ Bridge Results}
+\author{Dmitry Rakitin\\Independent Researcher\\\texttt{phizmat17@gmail.com}}
+\date{14 September 2026}
+\begin{document}
+\maketitle
+
+These are supplementary paper-level bridge statements. They do not have the same independent-audit
+status as the main theorem suite.
+
+\section*{B1: finite-window critical-line transfer}
+Fix a finite ordinate window $[T,2T]$ and retained simple critical-line zeros
+\[
+\Gamma_T=\{\gamma_1<\cdots<\gamma_s\},\qquad
+\Xi(\gamma_j)=0,\quad \Xi'(\gamma_j)\ne0.
+\]
+For any prescribed $\eta_T>0$ and lower threshold $\Lambda_*(T)$ there is
+$\Lambda_{C1}(T)\ge\Lambda_*(T)$ such that every
+$\lambda\ge\Lambda_{C1}(T)$, with
+\[
+t=\frac{e^\lambda}{1+e^\lambda},
+\]
+gives for each $j$ a unique simple real zero $r_j(t)$ of
+$H_t=(1-t)\cos+t\Xi$ satisfying
+\[
+|r_j(t)-\gamma_j|<\eta_T.
+\]
+For disjoint localization neighborhoods the order is preserved.
+
+\section*{B2: local multiplicity splitting}
+Let $f$ have a real zero $\gamma$ of multiplicity $m\ge1$, and let $g(\gamma)\ne0$.
+For all sufficiently small real $\varepsilon\ne0$, each perturbation
+$f+\varepsilon g$ and $f-\varepsilon g$ has exactly $m$ simple roots in a sufficiently
+small disk around $\gamma$. Across the two perturbations together, exactly two roots are real and
+\[
+\boxed{2m-2}
+\]
+are nonreal.
+
+In the $\Xi$ application one may choose a cosine direction nonvanishing at the retained zero;
+the campaign uses the pair $\cos z$ and $\cos(\sqrt2\,z)$ to avoid simultaneous vanishing.
+
+\section*{B3: finite-window defect identities}
+Let
+\[
+E_{\mathbb R}=\sum_{\gamma\ \mathrm{real}}(m_\gamma-1)
+\]
+over the retained real zeros in pairwise disjoint localization disks, and let
+$D_{\mathbb R}$ count the paired local nonreal roots generated from them. Then
+\[
+\boxed{D_{\mathbb R}=2E_{\mathbb R}}.
+\]
+If $N_{\rm off}$ is the total multiplicity of retained nonreal $\Xi$-zeros in the same
+finite localization scheme, then the full paired local defect obeys
+\[
+\boxed{D_{\rm all}=2N_{\rm off}+2E_{\mathbb R}}.
+\]
+
+These are finite/local identities. No endpoint-scale $o(N)$ global defect budget is claimed.
+
+\section*{Status}
+B1 is recorded as \texttt{C1 = SOLVED\_AT\_PAPER\_LEVEL}. B2 and B3 are paper-level
+local bridge results. They remain separate from the independently audited main COS--$\Xi$ theorem suite.
+\end{document}

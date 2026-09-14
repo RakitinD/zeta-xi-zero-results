@@ -1,0 +1,124 @@
+{
+  "researcher_id": "COSXI-E01",
+  "outcome": "OUTER_FRONT_TWO_TERM_AUTHOR_PROVED",
+  "independent_audit_performed": false,
+  "claims": [
+    {
+      "id": "E0_COMPACT_SCOPE",
+      "status": "STANDARD_REPROVED",
+      "statement": "H_t converges locally uniformly to Xi; the stated compact inequality excludes zeros; local multiplicity persists; near a simple real Xi zero the unique nearby H_t zero is real. The standard all-d RH escape equivalence is reproved only as scope.",
+      "parameter_scope": "Real t tends to 1; every fixed zero-free compact K; all-d equivalence for fixed d>0.",
+      "root_scope": "COMPACT_LOCAL_LEMMA",
+      "evidence_refs": [
+        {
+          "file": "ENDPOINT_PROOF.md",
+          "locator": "Section 1, including (1.1)"
+        }
+      ],
+      "limitations": [
+        "No simplicity assumption at multiple Xi zeros.",
+        "Compact persistence is not an endpoint expanding-region estimate."
+      ]
+    },
+    {
+      "id": "E1_EXTERIOR_MOTION",
+      "status": "AUTHOR_PROVED",
+      "statement": "A fixed original odd-phase branch in Re w>a satisfies dw/dlambda=-1/ell prime, decreasing Im z and speed<16/5. If nonempty its maximal exterior interval is (-infinity,beta), beta finite, and Re w tends to a at exit.",
+      "parameter_scope": "Real lambda on the maximal connected branch interval; a=2pi e^3.",
+      "root_scope": "EXTERIOR_BRANCH_ONLY",
+      "evidence_refs": [
+        {
+          "file": "ENDPOINT_PROOF.md",
+          "locator": "Section 2, (2.4)–(2.6) and interval proof"
+        }
+      ],
+      "limitations": [
+        "No continuation or unchanged labeling to t=1 through the boundary.",
+        "Finite exit is not collision on the real axis."
+      ]
+    },
+    {
+      "id": "E2_LEADING_OUTER_FRONT",
+      "status": "AUTHOR_PROVED",
+      "statement": "For every fixed d>1/2, R_d(t)=4lambda/pi+O_d(log lambda), with exclusion of all lower-radius roots at every height and a true simple correctly phased root within the upper bound.",
+      "parameter_scope": "Each fixed real d>1/2; lambda=log(t/(1-t)) tends to positive infinity.",
+      "root_scope": "ALL_ROOTS_ABOVE_D",
+      "evidence_refs": [
+        {
+          "file": "ENDPOINT_PROOF.md",
+          "locator": "Sections 3–5, especially (4.2) and (5.4)"
+        }
+      ],
+      "limitations": [
+        "No uniformity as d decreases to 1/2.",
+        "This is an author proof, not an independent PASS."
+      ]
+    },
+    {
+      "id": "E3_LOG_CORRECTION",
+      "status": "AUTHOR_PROVED",
+      "statement": "For every fixed d>1/2, R_d(t)=4lambda/pi+(2d+7)log(lambda)/pi+O_d(1). The all-height lower bound and actual-root upper bound give the complete radial minimum.",
+      "parameter_scope": "Each fixed real d>1/2; lambda tends to positive infinity.",
+      "root_scope": "ALL_ROOTS_ABOVE_D",
+      "evidence_refs": [
+        {
+          "file": "ENDPOINT_PROOF.md",
+          "locator": "Sections 4–6, theorem (T)"
+        }
+      ],
+      "limitations": [
+        "The bounded remainder is not asserted to converge.",
+        "Constants depend on d."
+      ]
+    },
+    {
+      "id": "E4_MOVING_PHASE",
+      "status": "AUTHOR_PROVED",
+      "statement": "Choose at each parameter a first-quadrant radial minimizer, breaking ties by least real part. Its height is d+O_d(1/log lambda), its original phase q=(2n+1)pi is asymptotic to 2lambda log(lambda)/pi, and n is asymptotic to lambda log(lambda)/pi^2.",
+      "parameter_scope": "Each fixed d>1/2; sufficiently large real lambda; selected minimizer at each parameter.",
+      "root_scope": "SELECTED_PHASE_SEQUENCE",
+      "evidence_refs": [
+        {
+          "file": "ENDPOINT_PROOF.md",
+          "locator": "Section 6, (6.1)–(6.3)"
+        }
+      ],
+      "limitations": [
+        "Selection may switch and need not be continuous.",
+        "Phase is not global radial rank or an old sufficient N(t)."
+      ]
+    },
+    {
+      "id": "E5_LOCAL_PROFILE",
+      "status": "AUTHOR_PROVED",
+      "statement": "At the explicitly prescribed x=T(lambda)+C and unique scalar modulus-balance height, the original normalized function at w=w_lambda+v/ell prime(w_lambda) equals 1+eta_lambda exp(v)+O_d,K((log lambda)^(-2)) locally uniformly. Along subsequences eta_lambda tends to eta, giving limit 1+eta exp(v) and local simple-zero persistence.",
+      "parameter_scope": "Each fixed d>1/2; compact complex v-sets; large real lambda, with subsequences for a fixed phase limit.",
+      "root_scope": "LOCAL_PHASE_PROFILE",
+      "evidence_refs": [
+        {
+          "file": "ENDPOINT_PROOF.md",
+          "locator": "Section 7, (7.1)–(7.2)"
+        }
+      ],
+      "limitations": [
+        "Residual phase is retained; no universal phase limit is asserted.",
+        "Generic analytic linearization with family-specific basepoint and bounds, not a new theta universality theorem.",
+        "Local profile points are only claimed in the Euler domain; not all are above d."
+      ]
+    }
+  ],
+  "limitations": [
+    "No critical-strip endpoint theorem for d<=1/2 and no new RH conclusion.",
+    "No Xi-zero simplicity, global trajectory classification or radial-order assumption.",
+    "No uniform bound on the old exceptional multiset as t approaches 1.",
+    "No numerical root scan or numerical certification.",
+    "No independent audit, formal proof verification or world-novelty determination.",
+    "No repair, replacement or subsequent research stage after this first freeze."
+  ],
+  "prior_art": {
+    "status": "BOUNDED_CHECK_NO_EXACT_ENDPOINT_MATCH;_GENERAL_COVERAGE_NOT_ESTABLISHED",
+    "world_novelty_established": false,
+    "scope": "Five short public queries; primary formula checks and bounded Hotta–Wang, Lagarias–Montague and Sjöstrand comparisons. Known methods distinguished from exact theorem coverage."
+  },
+  "stopped_for_review": true
+}
