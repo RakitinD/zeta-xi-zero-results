@@ -52,12 +52,9 @@ $$
 
 the current theorem suite contains five main blocks:
 
-1. explicit Lambert-\(W_0\) localization of an infinite simple nonreal zero sequence;
-2. completeness of the nonreal tail and
-   $$
-   N_t^{\rm nr}(R)\sim \frac{R\log R}{\pi};
-   $$
-3. a fixed-height endpoint front as \(t\uparrow1\);
+1. explicit Lambert-$W_0$ localization of an infinite simple nonreal zero sequence;
+2. completeness of the nonreal tail and $N_t^{\rm nr}(R)\sim \frac{R\log R}{\pi}$;
+3. a fixed-height endpoint front as $t\uparrow1$;
 4. a moving-boundary endpoint front down to the stated zero-free scale;
 5. quantified fixed-strip cluster/count/phase transfer.
 

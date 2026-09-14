@@ -2,9 +2,9 @@
 
 For
 
-\[
+$$
 H_t(z)=(1-t)\cos z+t\Xi(z),\qquad 0<t<1,
-\]
+$$
 
 this directory contains the current theorem suite and the separate proof/audit blocks behind it.
 
@@ -16,10 +16,10 @@ Start with:
 
 Main blocks:
 
-1. **Localization** — explicit Lambert-\(W_0\) centers and one simple nonreal zero per small disk.
+1. **Localization** — explicit Lambert-$W_0$ centers and one simple nonreal zero per small disk.
 2. **Completeness** — the localized tail exhausts all nonreal zeros up to a finite exceptional multiset,
-   and \(N_t^{\rm nr}(R)\sim R\log R/\pi\).
-3. **Fixed endpoint front** — two-term asymptotic as \(t\uparrow1\) outside fixed height \(d>1/2\).
+   and $N_t^{\rm nr}(R)\sim R\log R/\pi$.
+3. **Fixed endpoint front** — two-term asymptotic as $t\uparrow1$ outside fixed height $d>1/2$.
 4. **Moving-boundary front** — extension down to the explicit moving zero-free scale.
 5. **Strip transfer** — quantitative componentwise zero-count and phase transfer in a fixed strip window.
 

@@ -2,10 +2,10 @@
 
 ## Main theorem
 
-\[
+$$
 \liminf_{T\to\infty}\frac{N_0^s(T)}{N(T)}
 \ge 0.6734775921119.
-\]
+$$
 
 Exact endpoint: `6734775921119 / 10^13`.
 
