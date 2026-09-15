@@ -1,6 +1,6 @@
 # A strict computer-assisted refinement of a certified lower bound for simple critical-line zeros
 
-**Author-ready publication draft - 14 September 2026**
+**Corrected public release v0.1.1 - 15 September 2026**
 
 **Author:** Dmitry Rakitin  
 Independent Researcher  
@@ -23,7 +23,9 @@ a state-dependent nonlinear residual payment, a tail-aware finite band profile, 
 trimming/capacity construction, and an exact universal supporting plane certified by 464
 chord/ray Farkas certificates over 69 local rows. An isolated hostile audit passed mathematical
 kill targets K1-K15. A final publication referee returned
-`PUBLICATION_PASS_WITH_EDITORIAL_DEFECTS_ONLY` with no substantive blocker. The complete
+`PUBLICATION_PASS_WITH_EDITORIAL_DEFECTS_ONLY` with no substantive blocker. A later post-release
+regression audit found no mathematical or scope/trust-boundary blocker and triggered only public-layer
+self-containment, reproducibility, provenance, and rendering corrections in v0.1.1. The complete
 58,577,037-node Gebendorfer finite layer was independently cross-host replayed. Partial Lean
 formalization is frozen with its remaining boundary stated explicitly.
 
@@ -92,20 +94,23 @@ The frozen post-Gebendorfer proof is organized into audited blocks K1-K15:
 
 This note is deliberately compact. The full proof and data are distributed with it.
 
-Browseable key files:
-- `../proof/fusion/FUSION_PROOF.md`
-- `../proof/fusion/verify_fusion.py`
-- `../proof/hostile/INDEPENDENT_REDERIVATION.md`
-- `../proof/hostile/INDEPENDENT_FINAL_RECEIPT.json`
-- `../proof/gebendorfer/Zeta_Reblocking_Improvement.pdf`
-- `../proof/final_referee/REFEREE_REPORT.md`
+Browseable repository files:
+- `../proof/FUSION_PROOF.md`
+- `../proof/verify_fusion.py`
+- `../audit/INDEPENDENT_REDERIVATION.md`
+- `../audit/INDEPENDENT_FINAL_RECEIPT.json`
+- `../audit/FINAL_PUBLICATION_REFEREE_REPORT.md`
+- `../reproducibility/PGF_C_REPLAY_QUICKSTART.md`
+- `../reproducibility/EXTERNAL_GEBENDORFER_INPUT.md`
 
-Complete frozen archives:
-- `../artifacts/RH_POST_GEBENDORFER_FUSION_V1_3_RUN1_FROZEN_OUTPUTS.zip`
-- `../artifacts/RH_POST_GEBENDORFER_FUSION_HOSTILE_AUDIT_V1_RUN1_FROZEN_OUTPUTS.zip`
-- `../artifacts/Zeta_Reblocking_Repro.zip`
-- `../artifacts/GEBENDORFER_CROSS_HOST_REPLAY_EVIDENCE_V2.zip`
-- `../artifacts/RH_LEAN_FROZEN_SOURCES_STAGE5_STAGE6_RC1.zip`
+GitHub Release assets for the v0.1.1 public-safe set include:
+- `RH_POST_GEBENDORFER_FUSION_V1_3_PUBLIC_SAFE_OUTPUTS_V0_1_1.zip`
+- `RH_POST_GEBENDORFER_FUSION_HOSTILE_AUDIT_V1_RUN1_PUBLIC_SAFE_V0_1_1.zip`
+- `PGF_C_EXACT_REPLAY_PAYLOAD_V0_1_1.zip`
+- `GEBENDORFER_CROSS_HOST_REPLAY_EVIDENCE_V2.zip`
+- `RH_LEAN_FROZEN_SOURCES_STAGE5_STAGE6_RC1.zip`
+
+The original third-party reproduction ZIP and its exact extracted member files are not redistributed in the v0.1.1 public-safe assets; the source locator, SHA-256, and local hydration procedure are recorded in `../reproducibility/EXTERNAL_GEBENDORFER_INPUT.md` and `../reproducibility/PGF_C_REPLAY_QUICKSTART.md`.
 
 ## 5. Independent audits
 
@@ -118,7 +123,7 @@ The final publication referee gave
 and found no substantive mathematical, scope, or circularity blocker.
 
 The final referee's editorial/reproducibility findings are addressed in
-`../release/REFEREE_FINDINGS_RESOLUTION.md`.
+`../audit/REFEREE_FINDINGS_RESOLUTION.md`.
 
 ## 6. Lean status
 
@@ -149,12 +154,14 @@ PGF-A supports relocating its frozen source archives via:
 The exact Windows continuation used after the official Gebendorfer raw-byte failure is included in
 `../reproducibility/`.
 
-All final artifact hashes are frozen in `../PUBLICATION_MANIFEST.json` and
-`../hashes/HASHES_SHA256.txt`.
+Current Git-tree hashes and v0.1.1 Release-asset hashes are recorded in
+`../../provenance/GIT_TREE_HASHES_SHA256.txt` and `../../provenance/RELEASE_ASSET_HASHES.md`.
+Archive-original byte hashes that differ from Git-normalized JSON bytes are recorded separately in
+`../../provenance/ARCHIVE_ORIGINAL_HASHES.md`.
 
 ## 8. References
 
-See `../bibliography/REFERENCES.md`.
+See `../REFERENCES.md`.
 
 The external analytic inputs include Baluyot-Goldston-Suriajaya-Turnage-Butterbaugh,
 *An unconditional Montgomery theorem for pair correlation of zeros of the Riemann zeta-function*

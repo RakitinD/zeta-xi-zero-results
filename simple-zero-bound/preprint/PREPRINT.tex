@@ -7,7 +7,7 @@
 \setlength{\parindent}{0pt}
 \title{A strict computer-assisted refinement of a certified lower bound\\for simple critical-line zeros}
 \author{Dmitry Rakitin\\Independent Researcher\\\texttt{phizmat17@gmail.com}}
-\date{14 September 2026\\Author-ready publication draft}
+\date{15 September 2026\\Corrected public release v0.1.1}
 \begin{document}
 \maketitle
 
@@ -24,7 +24,9 @@ The exact difference from the supplied comparator is
 \]
 An isolated hostile audit passed mathematical kill targets K1--K15. A final publication referee
 returned \texttt{PUBLICATION\_PASS\_WITH\_EDITORIAL\_DEFECTS\_ONLY} with no substantive blocker.
-The complete 58,577,037-node Gebendorfer finite layer was independently cross-host replayed.
+A later post-release regression audit found no mathematical or scope/trust-boundary blocker and
+triggered only public-layer self-containment, reproducibility, provenance, and rendering corrections
+in v0.1.1. The complete 58,577,037-node Gebendorfer finite layer was independently cross-host replayed.
 Partial Lean formalization is frozen with its remaining boundaries stated explicitly.
 \end{abstract}
 
@@ -63,7 +65,7 @@ and a restricted eight-gap proof. The full finite computation comprises
 visited nodes.
 
 All computational obligations were independently replayed on a separate Windows host.
-The unmodified official \texttt{reproduce.py --full} returned code 1 at a raw-byte equality
+The unmodified official \texttt{reproduce.py -{}-full} returned code 1 at a raw-byte equality
 test after the nine local proofs because native Windows text mode emitted CRLF while the frozen
 artifact uses LF. A documented continuation completed the cover, coarsening, join, and restricted
 proof. After LF normalization the generated row sequences are identical, the 71-box coarsening
@@ -88,16 +90,17 @@ The frozen post-Gebendorfer proof is organized into audited blocks K1--K15:
 \end{itemize}
 
 \section{Full proof and evidence}
-This technical note is intentionally compact and is distributed with the complete frozen proof/evidence.
-The repository/release locator map is \texttt{proof/PROOF\_MAP.md}. Key browseable files are:
+This technical note is intentionally compact and is distributed with browseable proof/evidence plus GitHub Release assets. Key repository files are:
 \begin{itemize}
-\item \texttt{proof/fusion/FUSION\_PROOF.md} and \texttt{proof/fusion/verify\_fusion.py};
-\item \texttt{proof/hostile/INDEPENDENT\_REDERIVATION.md};
-\item \texttt{proof/hostile/INDEPENDENT\_FINAL\_RECEIPT.json};
-\item \texttt{proof/gebendorfer/Zeta\_Reblocking\_Improvement.pdf};
-\item \texttt{proof/final\_referee/REFEREE\_REPORT.md}.
+\item \nolinkurl{simple-zero-bound/proof/FUSION_PROOF.md};
+\item \nolinkurl{simple-zero-bound/proof/verify_fusion.py};
+\item \nolinkurl{simple-zero-bound/audit/INDEPENDENT_REDERIVATION.md};
+\item \nolinkurl{simple-zero-bound/audit/INDEPENDENT_FINAL_RECEIPT.json};
+\item \nolinkurl{simple-zero-bound/audit/FINAL_PUBLICATION_REFEREE_REPORT.md};
+\item \nolinkurl{simple-zero-bound/reproducibility/PGF_C_REPLAY_QUICKSTART.md};
+\item \nolinkurl{simple-zero-bound/reproducibility/EXTERNAL_GEBENDORFER_INPUT.md}.
 \end{itemize}
-Complete frozen archives are included under \texttt{artifacts/}. Their SHA-256 pins are listed in the publication manifest.
+The v0.1.1 public-safe Release assets include the fusion/hostile derivatives, the PGF-C exact replay payload, cross-host replay evidence, and frozen Lean sources. Their SHA-256 pins are listed in \texttt{provenance/RELEASE\_ASSET\_HASHES.md}. The original third-party Gebendorfer reproduction ZIP and its exact extracted member files are not redistributed in the v0.1.1 public-safe asset set; the replay payload is hydrated locally from the external source after SHA-256 verification.
 
 \section{Audit status}
 The isolated hostile audit gave
@@ -111,7 +114,7 @@ The final publication referee gave
 \texttt{PUBLICATION\_PASS\_WITH\_EDITORIAL\_DEFECTS\_ONLY}
 \]
 and found no substantive mathematical, scope, or circularity blocker. Its editorial findings
-and their RC3 resolutions are recorded in \texttt{release/REFEREE\_FINDINGS\_RESOLUTION.md}.
+and their RC3 resolutions are recorded in \nolinkurl{simple-zero-bound/audit/REFEREE_FINDINGS_RESOLUTION.md}.
 
 \section{Lean status}
 The release contains exact frozen Lean source/manifests for Stage 5, the Stage-6 bootstrap,
@@ -121,24 +124,31 @@ build stdout was absent from RC2. Accordingly these are \emph{reported local bui
 not independently reproduced build evidence.
 
 This is partial formalization, not an end-to-end Lean proof. The concrete K1
-Vandermonde/Sylvester zeta-operator realization remains an explicit boundary, K6--K15 are not
+Vandermonde--Sylvester zeta-operator realization remains an explicit boundary, K6--K15 are not
 fully internalized, and Lean does not rerun the 58,577,037-node interval computation.
 
 \section{Reproducibility}
 PGF-A supports relocating its frozen source archives with
-\[
-\texttt{python replay.py --input-dir <directory-containing-input-zips>}.
-\]
-The exact Windows continuation used after the official raw-byte failure is included under
-\texttt{reproducibility/}. The public package explicitly distinguishes the failed byte-identical
-single-process run from the successful cross-host continuation.
+\begin{quote}
+\texttt{python replay.py}\\
+\texttt{\quad -{}-input-dir <directory-containing-input-zips>}
+\end{quote}
+The exact Windows continuation used after the official raw-byte failure is documented under
+\nolinkurl{simple-zero-bound/reproducibility/}. For the exact finite fusion replay, extract
+\nolinkurl{PGF_C_EXACT_REPLAY_PAYLOAD_V0_1_1.zip}, obtain the external Gebendorfer ZIP, and run
+\begin{quote}
+\texttt{python -B -X utf8 hydrate\_external\_input.py}\\
+\texttt{\quad -{}-gebendorfer-zip /path/to/Zeta\_Reblocking\_Repro.zip}\\
+\texttt{python -B -X utf8 PGF-C/verify\_fusion.py -{}-all}
+\end{quote}
+The public package explicitly distinguishes
+the failed byte-identical single-process interval run from the successful cross-host continuation.
 
-\section{References}
 \begin{thebibliography}{9}
 \bibitem{Geb}
 J. J. Gebendorfer,
 \emph{Compatible local windows and a certified lower bound for simple critical-line zeros},
-7 September 2026. Supplied manuscript and reproduction package in this release.
+7 September 2026. Manuscript/reproduction package is an external comparator input; see the repository external-input note for the source locator and SHA-256.
 
 \bibitem{BGSTB}
 S. A. C. Baluyot, D. A. Goldston, A. I. Suriajaya, and C. L. Turnage-Butterbaugh,

@@ -86,6 +86,8 @@ See [`STATUS.md`](STATUS.md).
 - `CITATION.cff` — author/repository citation metadata.
 
 Large frozen archives are distributed as GitHub Release assets rather than committed to git history.
+The v0.1.1 public-safe asset set externalizes the original third-party Gebendorfer reproduction package bytes;
+see `simple-zero-bound/reproducibility/EXTERNAL_GEBENDORFER_INPUT.md`.
 
 ## License note
 

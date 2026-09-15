@@ -1,13 +1,13 @@
 \documentclass[11pt]{article}
-\usepackage[margin=0.92in]{geometry}
+\usepackage[margin=0.86in]{geometry}
 \usepackage{amsmath,amssymb,booktabs,hyperref}
 \usepackage[T1]{fontenc}
 \hypersetup{hidelinks}
-\setlength{\parskip}{0.45em}
+\setlength{\parskip}{0.35em}
 \setlength{\parindent}{0pt}
 \title{Frozen Theorem Statements:\\Simple Critical-Line Zeros}
 \author{Dmitry Rakitin\\Independent Researcher\\\texttt{phizmat17@gmail.com}}
-\date{14 September 2026}
+\date{15 September 2026\\Corrected public theorem sheet, v0.1.1}
 \begin{document}
 \maketitle
 \section*{Status}
@@ -17,6 +17,8 @@ the final publication referee returned
 \texttt{PUBLICATION\_PASS\_WITH\_EDITORIAL\_DEFECTS\_ONLY}.
 The Gebendorfer finite layer was independently cross-host replayed for 58,577,037 nodes.
 Lean formalization is partial.
+This v0.1.1 theorem sheet corrects public transcription/self-containment omissions identified by a
+post-release regression audit; the theorem endpoint and frozen proof are unchanged.
 
 \section*{Notation}
 Let $N(T)$ count all nontrivial zeta zeros $\rho$ with
@@ -24,6 +26,10 @@ $0<\operatorname{Im}\rho\le T$, with analytic multiplicity. Let $N_0^s(T)$ count
 zeros $\rho=\frac12+i\gamma$ with $0<\gamma\le T$ and multiplicity one. Put
 \[
 \kappa_0^s=\liminf_{T\to\infty}\frac{N_0^s(T)}{N(T)}.
+\]
+The frozen certified lower floor for the window constant $2-C(f_0)$ used below is
+\[
+h:=\frac{210042647916503}{312500000000000}.
 \]
 
 \section*{Theorem S1: simple critical-line zero proportion}
@@ -50,7 +56,11 @@ with $d=D/N$ and $y=Y/N$, one has
 \[
 S_2-2N+s=D+Y,\qquad hN+D+Y\le s+o(N),
 \]
-and the feasible region contains
+with
+\[
+Y=2q_0+W+J+Z\ge0.
+\]
+The feasible region contains
 \[
 h\le x\le1,\qquad 2u+v\le x,\qquad d+y\le x-h,
 \]
@@ -60,6 +70,7 @@ d\ge u+2v+\frac{(u+v)^2}{x-u}.
 All later gains are restrictions or decompositions of this same residual budget.
 
 \section*{Theorem S3: global residual payment}
+For the same normalized state and every $\rho\ge0$ in the frozen route,
 \[
 y-\rho v\ge-p_h(x;\rho),
 \]
@@ -69,6 +80,10 @@ p_h(x;\rho)=\frac{\sqrt{A_x^2+\rho^2N_x}-A_x}{2},\quad
 A_x=(2x-h)+\rho x,\quad
 N_x=\frac{(2-h)x-h}{2}.
 \]
+Equivalently,
+\[
+p_h^2+A_xp_h=\frac{\rho^2N_x}{4}.
+\]
 
 \section*{Theorem S4: universal local supporting plane}
 For
@@ -76,13 +91,42 @@ For
 m=492,\qquad \rho=\frac{19569717577}{10^{14}},\qquad
 R=\frac{38219880252651}{10^{13}},
 \]
-the frozen tail-aware band profile satisfies
+and the six fixed nonnegative position prices
+\[
+\begin{aligned}
+(t_0,\ldots,t_5)=\biggl(&\frac{2444609786511}{25000000000000},
+\frac{28224041240321}{10^{14}},
+\frac{24984358312191}{50000000000000},\\
+&\frac{72302683681231}{10^{14}},
+\frac{90853194486369}{10^{14}},
+\frac{1249217915609}{1250000000000}\biggr),
+\end{aligned}
+\]
+put $n=m-6=486$ and
+\[
+B:=\frac{1970462189}{500000000000},\qquad \tau:=\frac76.
+\]
+For the $m$-point Gram block define
+\[
+E:=2\sum_{i<j,\,j-i\le6}|G_{ij}|^2,\qquad e:=\frac En,
+\qquad u_k^{\rm loc}:=\frac{B S_k}{n}\quad(0\le k\le5),
+\]
+where $S_k$ are the frozen gap-position sums used by the reflected-trim constraints. Define
+\[
+G_{m,\rho}(E)=
+\begin{cases}
+E,&E\le\tau(1+\rho/2)^2,\\
+\displaystyle\frac{E+m\left(2(1+\rho/2)\sqrt{E/\tau}-(1+\rho/2)^2\right)}
+{1+m/\tau},&E>\tau(1+\rho/2)^2.
+\end{cases}
+\]
+The frozen tail-aware band profile then satisfies
 \[
 \boxed{
 G_{m,\rho}(ne)+n\sum_{k=0}^5t_k u_k^{\rm loc}\ge R
 }
 \]
-throughout the complete 69-row reflected-trim polyhedron, with $n=486$.
+throughout the complete 69-row reflected-trim polyhedron.
 The certificate uses 464 exact rational chord/ray pieces with nonnegative Farkas weights;
 floating vertex completeness is not a premise.
 
@@ -101,7 +145,14 @@ Let
 \[
 s_0=\frac{6734775921119}{10^{13}}.
 \]
-The exact replay verifies the strictly positive rational margin
+For $h\le x\le s_0$, the frozen function $p_h(x;\rho)$ is increasing in $x$.
+The exact replay supplies a rational $\bar p\ge0$ satisfying
+\[
+\bar p^2+A_{s_0}\bar p\ge\frac{\rho^2N_{s_0}}4.
+\]
+Since $p\mapsto p^2+A_{s_0}p$ is increasing on $p\ge0$, this gives
+$p_h(s_0;\rho)\le\bar p$, and hence $p_h(x;\rho)\le\bar p$ throughout $h\le x\le s_0$.
+It then verifies the strictly positive rational margin
 \[
 M_{\rm end}:=mh-P_{\rm price}-m\bar p-(m-R)s_0>0.
 \]
@@ -114,15 +165,10 @@ this excludes $h\le x\le s_0$; the imported basic inequality excludes $x<h$.
 
 \section*{Dependency map}
 \[
-\text{certified local base}
-\to
-\text{common residual state}
-\to
-\text{69-row plane}
-\to
-\text{transport + one global payment}
-\to
-\text{exact separator}.
+\begin{aligned}
+\text{certified local base}&\longrightarrow\text{common residual state}\longrightarrow\text{69-row plane},\\
+\text{69-row plane}&\longrightarrow\text{transport + one global payment}\longrightarrow\text{exact separator}.
+\end{aligned}
 \]
 
 \section*{Scope}

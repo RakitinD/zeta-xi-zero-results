@@ -288,10 +288,11 @@ NO_DOUBLE_COUNT_LEDGER lists every resource and its spend. All local rows share 
 
 The supplied ceilings are not extended beyond their frozen scopes. The present result is not an exhaustive theorem about arbitrary heterogeneous packet designs, nor a new discovery of universal local rows. It is an exhaustive legal-module accounting and a completed bounded search in the exported finite fusion family, followed by exact certification of a strict improvement. No subsequent optimization or critic stage follows this first complete freeze.
 
-From this output directory, the cheap read-only ROOT replay is:
+The browseable repository copy of `verify_fusion.py` is a source mirror and is **not** standalone without the frozen PGF-C data directory. For a public exact replay, download the GitHub Release asset `PGF_C_EXACT_REPLAY_PAYLOAD_V0_1_1.zip` and obtain the external `Zeta_Reblocking_Repro.zip` from its source of record. After verifying the external SHA-256, hydrate the omitted primary files and run:
 
-```powershell
-& 'C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' -B -X utf8 './verify_fusion.py'
+```text
+python -B -X utf8 hydrate_external_input.py --gebendorfer-zip /path/to/Zeta_Reblocking_Repro.zip
+python -B -X utf8 PGF-C/verify_fusion.py --all
 ```
 
-It checks the complete 86,992-subset enumeration, primary coefficient binding, the winning whole-polyhedron rational certificate, strict separator, and final output manifest. `--all` additionally rechecks all 24 supplied plane/endgame certificates and takes only a few seconds. No optimizer, external package, local interval replay or network is needed. The final freeze binds RESULT and all payload files; MANIFEST binds every output except itself. ROOT should bind the manifest and then STOP_FOR_SOL_REVIEW.
+The hydration helper verifies both the external archive and every copied primary file against the frozen PGF-C manifest. The replay then checks the complete 86,992-subset enumeration, primary coefficient binding, the winning whole-polyhedron rational certificate, strict separator, all supplied plane/endgame certificates, and the frozen output manifest. No optimizer, local interval replay, or network access is used by the replay itself. The imported analytic theorems and the 58,577,037-node Gebendorfer interval computation remain external trust inputs. See `../reproducibility/PGF_C_REPLAY_QUICKSTART.md`.

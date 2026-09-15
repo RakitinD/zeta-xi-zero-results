@@ -1,8 +1,8 @@
 # References
 
 1. Jonas J. Gebendorfer, *Compatible local windows and a certified lower bound for simple critical-line zeros*,
-   7 September 2026. Supplied manuscript and reproduction package:
-   `../proof/gebendorfer/Zeta_Reblocking_Improvement.pdf` and `../artifacts/Zeta_Reblocking_Repro.zip`.
+   7 September 2026. Manuscript/reproduction package is an external comparator input.
+   See `reproducibility/EXTERNAL_GEBENDORFER_INPUT.md` for the source-of-record locator and SHA-256.
 
 2. S. A. C. Baluyot, D. A. Goldston, A. I. Suriajaya, and C. L. Turnage-Butterbaugh,
    *An unconditional Montgomery theorem for pair correlation of zeros of the Riemann zeta-function*,

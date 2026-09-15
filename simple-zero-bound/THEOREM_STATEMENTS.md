@@ -1,14 +1,18 @@
 # Frozen theorem statements: simple critical-line zeros
 
-**Dmitry Rakitin**  
-Independent Researcher  
-phizmat17@gmail.com  
-14 September 2026
+**Dmitry Rakitin**
+Independent Researcher
+phizmat17@gmail.com
+15 September 2026
 
 ## Status
 
 This document extracts the theorem-level statements from the frozen post-Gebendorfer fusion proof.
 It is an entry point to the full proof and evidence; it is not a replacement for them.
+
+**Correction note (15 September 2026, v0.1.1).** The theorem endpoint and frozen proof are
+unchanged. This revision restores definitions omitted from the shortened public theorem sheet and
+updates reproducibility/provenance pointers after a post-release regression audit.
 
 Current verification status:
 
@@ -32,6 +36,12 @@ multiplicity exactly one. Define
 
 $$
 \kappa_0^s=\liminf_{T\to\infty}\frac{N_0^s(T)}{N(T)}.
+$$
+
+The frozen certified lower floor for the window constant $2-C(f_0)$ used in Theorems S2--S6 is
+
+$$
+h:=\frac{210042647916503}{312500000000000}.
 $$
 
 ## Theorem S1 - simple critical-line zero proportion
@@ -166,8 +176,33 @@ $$
 \right).
 $$
 
-For the $m$-point local block, put $n=m-6=486$, let $e$ be the normalized local energy,
-and let $u_0^{\rm loc},\ldots,u_5^{\rm loc}$ be the six local position coordinates.
+For the $m$-point Gram block, put
+
+$$
+n=m-6=486,\qquad
+B:=\frac{1970462189}{500000000000},\qquad
+\tau:=\frac76,
+$$
+
+and define
+
+$$
+E:=2\sum_{i<j,\,j-i\le6}|G_{ij}|^2,\qquad
+e:=\frac{E}{n},\qquad
+u_k^{\rm loc}:=\frac{B S_k}{n}\quad(0\le k\le5),
+$$
+
+where $S_k$ are the frozen gap-position sums used by the reflected-trim constraints. Define
+
+$$
+G_{m,\rho}(E)=
+\begin{cases}
+E,&E\le\tau(1+\rho/2)^2,\\[1mm]
+\displaystyle\frac{E+m\left(2(1+\rho/2)\sqrt{E/\tau}-(1+\rho/2)^2\right)}
+{1+m/\tau},&E>\tau(1+\rho/2)^2.
+\end{cases}
+$$
+
 The frozen tail-aware band profile $G_{m,\rho}$ satisfies
 
 $$
@@ -210,7 +245,15 @@ s_0=\frac{6734775921119}{10^{13}}.
 $$
 
 For $h\le x\le s_0$, the frozen function $p_h(x;\rho)$ is increasing in $x$.
-The exact replay supplies a rational upper enclosure $\bar p\ge p_h(s_0;\rho)$ and verifies
+The exact replay supplies a rational $\bar p\ge0$ satisfying
+
+$$
+\bar p^2+A_{s_0}\bar p\ge\frac{\rho^2N_{s_0}}4.
+$$
+
+Since $p\mapsto p^2+A_{s_0}p$ is increasing on $p\ge0$, this gives
+$ p_h(s_0;\rho)\le\bar p$, and hence $p_h(x;\rho)\le\bar p$ throughout
+$h\le x\le s_0$. The exact replay then verifies
 
 $$
 mh-P_{\rm price}-m\bar p-(m-R)s_0
@@ -254,11 +297,11 @@ $$
 
 ## Frozen provenance
 
-- post-Gebendorfer fusion V1.3 archive SHA-256:  
+- historical frozen post-Gebendorfer fusion V1.3 archive SHA-256 (not redistributed in v0.1.1):
   `a028aa7398cbc0f8bfeb0258c03fdf38244dd24928badcac303905954bd98e5d`
-- hostile-audit archive SHA-256:  
+- historical frozen hostile-audit archive SHA-256 (not redistributed in original form in v0.1.1):
   `d62d4629d003034136670924b2b68cc1c23e0a5fafd95e7ab1447d0fad35596f`
-- Gebendorfer reproduction archive SHA-256:  
+- external Gebendorfer reproduction archive SHA-256 (download separately; not redistributed in v0.1.1):
   `7398223b5f7d33166e25f53742541f6e2518ed95a53541b5b74ec276e4e52a47`
-- independent cross-host replay evidence ZIP SHA-256:  
+- independent cross-host replay evidence ZIP SHA-256:
   `2ff2fc08558d07e400356737305a56e272eba5b73296434d61eccfca6889859c`

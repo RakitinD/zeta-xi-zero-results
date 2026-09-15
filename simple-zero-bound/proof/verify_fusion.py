@@ -1,7 +1,12 @@
-"""Standalone exact replay. Python standard library only; no optimizer or local replay.
+"""Exact replay engine for the complete frozen PGF-C payload.
 
-python -B -X utf8 verify_fusion.py
-python -B -X utf8 verify_fusion.py --all
+The browseable repository copy is a source mirror and does not carry the required payload files.
+After extracting the v0.1.1 replay asset and hydrating the external primary input, run:
+
+python -B -X utf8 PGF-C/verify_fusion.py
+python -B -X utf8 PGF-C/verify_fusion.py --all
+
+Python standard library only; no optimizer or local interval replay.
 """
 import sys
 sys.dont_write_bytecode=True

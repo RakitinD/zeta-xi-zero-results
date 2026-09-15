@@ -8,6 +8,7 @@
 | Exact author verifier | `PASS_EXACT` |
 | Hostile mathematical audit | K1–K15 PASS |
 | Final publication referee | `PUBLICATION_PASS_WITH_EDITORIAL_DEFECTS_ONLY` |
+| Post-release regression audit | 0 mathematical blockers; v0.1.1 public-layer patch applied |
 | Gebendorfer finite layer | independent cross-host replay PASS, 58,577,037 nodes |
 | Lean Stage 5 | frozen |
 | Lean Stage-6 bootstrap | reported local build + axiom audit PASS |
